@@ -1,2 +1,10 @@
-# GlassGo-Frontend
-Repositorio para la aplicación web frontend, desarrollada con Vue.js + PrimeVue. Aquí se construye la interfaz de usuario, componentes, vistas y la integración con el backend.
+# GlassGo Frontend Application
+
+## Overview
+This is the frontend application for GlassGo.
+
+## User Stories
+You can find the user stories in the [docs/user-stories.md](docs/user-stories.md) file.
+
+## Class Diagram
+You can find the class diagram in the [docs/class-diagram.puml](docs/class-diagram.puml) file.
