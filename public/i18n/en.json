@@ -1,0 +1,24 @@
+{
+  "toolbar": {
+    "option": {
+      "home": "Home",
+      "create-order": "Create order",
+      "tracking": "Tracking",
+      "inventory": "Inventory",
+      "calendar": "Calendar",
+      "report": "Report",
+      "history": "History",
+      "claims": "Claims",
+      "configuration": "Configuration"
+    }
+  },
+  "home": {
+    "title": "Hello, user!",
+    "subtitle": "Here's the summary of your today's operations."
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path <strong>{{ invalid_path }}</strong> does not exist.",
+    "go-home": "Go Home"
+  }
+}

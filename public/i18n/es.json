@@ -1,0 +1,24 @@
+{
+  "toolbar": {
+    "option": {
+      "home": "Inicio",
+      "create-order": "Crear pedido",
+      "tracking": "Trazabilidad",
+      "inventory": "Inventario",
+      "calendar": "Calendario",
+      "report": "Reporte",
+      "history": "Historial",
+      "claims": "Reclamos",
+      "configuration": "Configuración"
+    }
+  },
+  "home": {
+    "title": "¡Hola, usuario!",
+    "subtitle": "Aquí tienes el resumen de tus operaciones de hoy."
+  },
+  "page-not-found": {
+    "title": "Página No Encontrada",
+    "content": "La ruta <strong>{{ invalid_path }}</strong> no existe.",
+    "go-home": "Volver a Inicio"
+  }
+}
