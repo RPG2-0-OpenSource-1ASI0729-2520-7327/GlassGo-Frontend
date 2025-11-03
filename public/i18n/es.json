@@ -1,24 +1,82 @@
-{
-  "toolbar": {
-    "option": {
-      "home": "Inicio",
-      "create-order": "Crear pedido",
-      "tracking": "Trazabilidad",
-      "inventory": "Inventario",
-      "calendar": "Calendario",
-      "report": "Reporte",
-      "history": "Historial",
-      "claims": "Reclamos",
-      "configuration": "Configuración"
-    }
+﻿{
+  "option": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "categories": "Categorías",
+    "courses": "Cursos",
+    "places": "Lugares"
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "content": "Learning Center-7327 es una Plataforma educativa empresarial, parte de Logo Corporation."
   },
   "home": {
-    "title": "¡Hola, usuario!",
-    "subtitle": "Aquí tienes el resumen de tus operaciones de hoy."
+    "title": "Bienvenido",
+    "content": "Bienvenido a Learning Center-7327."
+  },
+  "places": {
+    "list-title": "Lugares",
+    "id": "ID",
+    "name": "Nombre",
+    "address": "Dirección",
+    "new": "Nuevo Lugar",
+    "edit": "Editar",
+    "delete": "Eliminar"
   },
   "page-not-found": {
     "title": "Página No Encontrada",
-    "content": "La ruta <strong>{{ invalid_path }}</strong> no existe.",
-    "go-home": "Volver a Inicio"
+    "content": "La ruta <strong>{{ invalid_path }}</strong> es inválida.",
+    "go-home": "Ir a Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "powered-by": "Desarrollado con",
+    "and": "y"
+  },
+  "categories": {
+    "list-title": "Categorías",
+    "id": "ID",
+    "name": "Nombre",
+    "actions": "Acciones",
+    "new": "Nueva Categoría",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "category": {
+    "new-title": "Crear Nueva Categoría",
+    "edit-title": "Editar Categoría",
+    "name": "Nombre",
+    "create": "Crear Categoría",
+    "update": "Actualizar Categoría",
+    "cancel": "Cancelar",
+    "error": {
+      "name-required": "El nombre es obligatorio"
+    }
+  },
+  "courses": {
+    "list-title": "Cursos",
+    "id": "ID",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "actions": "Acciones",
+    "new": "Nuevo Curso",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "course": {
+    "new-title": "Crear Nuevo Curso",
+    "edit-title": "Editar Curso",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "create": "Crear Curso",
+    "update": "Actualizar Curso",
+    "cancel": "Cancelar",
+    "error": {
+      "title-required": "El título es obligatorio",
+      "description-required": "La descripción es obligatoria",
+      "category-required": "La categoría es obligatoria"
+    }
   }
 }

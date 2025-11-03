@@ -1,24 +1,82 @@
-{
-  "toolbar": {
-    "option": {
-      "home": "Home",
-      "create-order": "Create order",
-      "tracking": "Tracking",
-      "inventory": "Inventory",
-      "calendar": "Calendar",
-      "report": "Report",
-      "history": "History",
-      "claims": "Claims",
-      "configuration": "Configuration"
-    }
+﻿{
+  "option": {
+    "home": "Home",
+    "about": "About",
+    "categories": "Categories",
+    "courses": "Courses",
+    "places": "Places"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Learning Center-7327 is an Education Business Platform, part of Logo Corporation."
   },
   "home": {
-    "title": "Hello, user!",
-    "subtitle": "Here's the summary of your today's operations."
+    "title": "Welcome",
+    "content": "Welcome to Learning Center-7327."
+  },
+  "places": {
+    "list-title": "Places",
+    "id": "ID",
+    "name": "Name",
+    "address": "Address",
+    "new": "New Place",
+    "edit": "Edit",
+    "delete": "Delete"
   },
   "page-not-found": {
     "title": "Page Not Found",
-    "content": "The path <strong>{{ invalid_path }}</strong> does not exist.",
+    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
     "go-home": "Go Home"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "powered-by": "Powered by",
+    "and": "and"
+  },
+  "categories": {
+    "list-title": "Categories",
+    "id": "ID",
+    "name": "Name",
+    "actions": "Actions",
+    "new": "New Category",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "category": {
+    "new-title": "Create New Category",
+    "edit-title": "Edit Category",
+    "name": "Name",
+    "create": "Create Category",
+    "update": "Update Category",
+    "cancel": "Cancel",
+    "error": {
+      "name-required": "Name is required"
+    }
+  },
+  "courses": {
+    "list-title": "Courses",
+    "id": "ID",
+    "title": "Title",
+    "description": "Description",
+    "category": "Category",
+    "actions": "Actions",
+    "new": "New Course",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "course": {
+    "new-title": "Create New Course",
+    "edit-title": "Edit Course",
+    "title": "Title",
+    "description": "Description",
+    "category": "Category",
+    "create": "Create Course",
+    "update": "Update Course",
+    "cancel": "Cancel",
+    "error": {
+      "title-required": "Title is required",
+      "description-required": "Description is required",
+      "category-required": "Category is required"
+    }
   }
 }

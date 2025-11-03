@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "GlassGo-Frontend": {
+    "learning-center7327": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "GlassGo-Frontend:build:production"
+              "buildTarget": "learning-center7327:build:production"
             },
             "development": {
-              "buildTarget": "GlassGo-Frontend:build:development"
+              "buildTarget": "learning-center7327:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,5 +95,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
