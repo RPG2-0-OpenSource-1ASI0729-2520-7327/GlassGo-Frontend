@@ -1,20 +1,14 @@
-import {Component, inject, signal} from '@angular/core';
-import {Layout} from './shared/presentation/components/layout/layout';
-import {TranslateService} from '@ngx-translate/core';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [Layout],
+  standalone: true,
+  imports: [CommonModule, RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css'
+  styleUrls: ['./app.css']
 })
-export class App {
-  protected readonly title = signal('learning-center');
-  private translate: TranslateService;
-
-  constructor() {
-    this.translate = inject(TranslateService);
-    this.translate.addLangs(['en', 'es']);
-    this.translate.use('en');
-  }
+export class AppComponent {
+  title = 'GlassGo';
 }
