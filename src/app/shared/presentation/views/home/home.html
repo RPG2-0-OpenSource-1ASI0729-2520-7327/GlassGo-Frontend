@@ -1,4 +1,80 @@
-<div class="container-with-spacing">
-  <h1>{{ 'home.title' | translate }}</h1>
-  <p>{{ 'home.content' | translate }}</p>
+<div class="home-container">
+  <!-- Header de bienvenida -->
+  <div class="welcome-header">
+    <h1>Hola, {{ userName }} 👋</h1>
+    <p>Aquí tienes el resumen de tus operaciones de hoy.</p>
+  </div>
+
+  <!-- Estadísticas principales -->
+  <div class="stats">
+    <div class="card">
+      <h3>Pedidos activos</h3>
+      <p>{{ stats.activeOrders }}</p>
+    </div>
+    <div class="card">
+      <h3>Stock disponible</h3>
+      <p>{{ stats.stockAvailable }}</p>
+    </div>
+    <div class="card">
+      <h3>Tiempo estimado</h3>
+      <p>{{ stats.estimatedTime }}</p>
+    </div>
+    <div class="card">
+      <h3>Pedidos evitados</h3>
+      <p>{{ stats.avoidedOrders }}</p>
+    </div>
+  </div>
+
+  <!-- Contenido dividido -->
+  <div class="content-grid">
+    <!-- Tracking -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>Tracking y Pedidos recientes</h2>
+        <a href="#">Ver más</a>
+      </div>
+      <ul>
+        <li *ngFor="let t of recentTracking">
+          <strong>{{ t.status }}</strong><br>
+          Número de seguimiento: <span class="track-id">{{ t.trackingId }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Inventario -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>Inventario</h2>
+        <a href="#">Ver más</a>
+      </div>
+      <ul>
+        <li *ngFor="let i of inventory">
+          Estado: <strong>{{ i.status }}</strong><br>
+          Nº seguimiento: <span class="track-id">{{ i.trackingId }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Reportes -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>Reportes</h2>
+        <a href="#">Ver más</a>
+      </div>
+      <p>Visualizar reportes.</p>
+    </div>
+
+    <!-- Calendario -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>Calendario</h2>
+        <a href="#">Ver más</a>
+      </div>
+      <ul>
+        <li *ngFor="let c of calendar">
+          📅 {{ c.date }} — Orden número: {{ c.orderId }}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
