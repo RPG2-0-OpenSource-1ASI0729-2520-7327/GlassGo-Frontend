@@ -1,28 +1,18 @@
-import {Component, inject, OnInit} from '@angular/core';
-import {ActivatedRoute, Router} from '@angular/router';
-import {TranslatePipe} from '@ngx-translate/core';
-import {MatButton} from '@angular/material/button';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-page-not-found',
-  imports: [
-    TranslatePipe,
-    MatButton
-  ],
-  templateUrl: './page-not-found.html',
-  styleUrl: './page-not-found.css'
+  standalone: true,
+  imports: [CommonModule],
+  template: `<div style="text-align:center;padding:40px">
+               <h1>404 - Página no encontrada</h1>
+               <button (click)="goHome()">Volver al inicio</button>
+             </div>`,
+  styles: [`button{ margin-top:12px; padding:8px 14px; border-radius:6px; background:#0f62fe; color:#fff; border:none}`]
 })
-export class PageNotFound implements OnInit {
-  protected invalidPath: string = '';
-  private route: ActivatedRoute = inject(ActivatedRoute);
-  private router: Router = inject(Router);
-  ngOnInit(): void {
-    this.invalidPath = this.route.snapshot.url
-      .map(url  => url.path)
-      .join('/');
-  }
-
-  protected navigateToHome(): void {
-    this.router.navigate(['home']).then();
-  }
+export class PageNotFoundComponent {
+  constructor(private router: Router) {}
+  goHome() { this.router.navigate(['/app/home']); }
 }
