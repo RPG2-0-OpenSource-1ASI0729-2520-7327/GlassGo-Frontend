@@ -1,14 +1,30 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <h1>Learning Center7327</h1>
-    <div class="mat-spacer"></div>
-    @for (option of options; track option.label) {
-      <a mat-button [routerLink]="option.link" routerLinkActive="active">
-        {{ option.label | translate }}
-      </a>
-    }
-    <app-language-switcher/>
-  </mat-toolbar-row>
-</mat-toolbar>
-<router-outlet/>
-<app-footer-content/>
+<div class="layout-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <div class="logo">{{ appTitle }}</div>
+
+    <nav>
+      <a routerLink="/home" routerLinkActive="active">🏠 Inicio</a>
+      <a routerLink="/crear-pedido" routerLinkActive="active">🧾 Crear Pedido</a>
+      <a routerLink="/tracking" routerLinkActive="active">📦 Tracking</a>
+      <a routerLink="/inventario" routerLinkActive="active">📋 Inventario</a>
+      <a routerLink="/calendar" routerLinkActive="active">📅 Calendario</a>
+      <a routerLink="/reportes" routerLinkActive="active">📊 Reportes</a>
+      <a routerLink="/historial" routerLinkActive="active">📜 Historial</a>
+      <a routerLink="/reclamos" routerLinkActive="active">⚠️ Reclamos</a>
+    </nav>
+
+    <button class="logout" (click)="logout()">Cerrar sesión</button>
+  </aside>
+
+  <!-- Contenido principal -->
+  <main class="main-content">
+    <header class="breadcrumb">
+      <h2>{{ currentRoute }}</h2>
+    </header>
+
+    <section class="content-wrapper">
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>
