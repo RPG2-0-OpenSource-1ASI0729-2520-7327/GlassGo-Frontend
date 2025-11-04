@@ -1,15 +1,25 @@
-import {Routes} from '@angular/router';
-import {Home} from './shared/presentation/views/home/home';
+import { Routes } from '@angular/router';
+import { LayoutComponent } from './shared/presentation/components/layout/layout';
+import { HomeComponent } from './shared/presentation/views/home/home';
+import { ComingSoonComponent } from './shared/presentation/views/coming-soon/coming-soon';
+import { PageNotFoundComponent } from './shared/presentation/views/page-not-found/page-not-found';
 
-const about = () => import('./shared/presentation/views/about/about').then(m => m.About);
-const pageNotFound = () => import('./shared/presentation/views/page-not-found/page-not-found').then(m => m.PageNotFound);
-const learningRoutes = () => import('./learning/presentation/learning.routes').then(m => m.learningRoutes);
-
-const baseTitle = 'Learning Center7327';
 export const routes: Routes = [
-  { path: 'home',     component:      Home,                     title: `Home - ${baseTitle}` },
-  { path: 'about',    loadComponent:  about,                    title: `About - ${baseTitle}` },
-  { path: 'learning', loadChildren:   learningRoutes },
-  { path: '',         redirectTo:     '/home',                  pathMatch: 'full' },
-  { path: '**',       loadComponent:  pageNotFound,             title:  `Page Not Found - ${baseTitle}` }
+  { path: '', redirectTo: 'app/home', pathMatch: 'full' },
+
+  {
+    path: 'app',
+    component: LayoutComponent,
+    children: [
+      { path: 'home', component: HomeComponent, title: 'Home - GlassGo' },
+      { path: 'crear-pedido', component: ComingSoonComponent, title: 'Crear Pedido - GlassGo' },
+      { path: 'tracking', component: ComingSoonComponent, title: 'Tracking - GlassGo' },
+      { path: 'inventario', component: ComingSoonComponent, title: 'Inventario - GlassGo' },
+      { path: 'reportes', component: ComingSoonComponent, title: 'Reportes - GlassGo' },
+      { path: 'calendar', component: ComingSoonComponent, title: 'Calendario - GlassGo' },
+      { path: '', redirectTo: 'home', pathMatch: 'full' }
+    ]
+  },
+
+  { path: '**', component: PageNotFoundComponent, title: 'Página no encontrada - GlassGo' }
 ];
