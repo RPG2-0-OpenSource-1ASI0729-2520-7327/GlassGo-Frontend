@@ -1,7 +1,7 @@
 {
-  "name": "learning-center7327",
+  "name": "Frontend",
   "version": "1.0.0",
-  "author": "Guillermo Howard",
+  "author": "RPG2.0",
   "License": "MIT",
   "scripts": {
     "ng": "ng",
