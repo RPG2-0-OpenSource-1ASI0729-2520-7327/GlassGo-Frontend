@@ -1,1 +1,37 @@
-<p>administration works!</p>
+<div class="registro-clientes">
+  <h1>Registro de clientes en la aplicación</h1>
+
+  <section>
+    <h2>Distribuidoras</h2>
+    <div class="tarjeta" *ngFor="let dist of distribuidoras; let i = index">
+      <div class="avatar"></div>
+      <div class="info">
+        <h3>{{ dist.nombre }}</h3>
+        <p>{{ dist.descripcion }}</p>
+        <button class="ver-mas">Ver más</button>
+      </div>
+      <div class="acciones">
+        <button class="btn"><i class="pi pi-exclamation-triangle"></i></button>
+        <button class="btn"><i class="pi pi-heart-fill"></i></button>
+        <button class="btn"><i class="pi pi-send"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Licorerías</h2>
+    <div class="tarjeta" *ngFor="let lic of licorerias; let i = index">
+      <div class="avatar"></div>
+      <div class="info">
+        <h3>{{ lic.nombre }}</h3>
+        <p>{{ lic.descripcion }}</p>
+        <button class="ver-mas">Ver más</button>
+      </div>
+      <div class="acciones">
+        <button class="btn"><i class="pi pi-exclamation-triangle"></i></button>
+        <button class="btn"><i class="pi pi-heart-fill"></i></button>
+        <button class="btn"><i class="pi pi-send"></i></button>
+      </div>
+    </div>
+  </section>
+</div>
