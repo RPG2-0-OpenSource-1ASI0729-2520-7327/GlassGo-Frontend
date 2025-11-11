@@ -35,8 +35,7 @@ src/
 ## 🚀 Run Locally
 ```bash
 npm install
-cp .env.example .env
-npm run dev
+npm start
 ```
 
 Example `.env`:
@@ -48,7 +47,7 @@ VITE_API_BASE_URL=http://localhost:3000
 ## Run Fake API (json-server)
 ```bash
 cd server
-server % json-server --watch db.json
+npx json-server --watch db.json --port 3000
 ```
 
 ---
