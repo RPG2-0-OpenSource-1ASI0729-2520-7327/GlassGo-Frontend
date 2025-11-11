@@ -1,59 +1,106 @@
-# LearningCenter7327
+# GlassGo-Frontend
+This repository contains the **Frontend Open Source Application Development** of **GlassGo**, developed by **RPG Startup** as part of the course *1ASI0729 – Open Source Application Development* at UPC.
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.5.
+---
 
-## Development server
+## 🧱 Stack
+- **i18n** for internationalization (EN default, ES available)
+- **Chart.js** for dashb oard analytics
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
+## ⚙️ Project Structure
+```
+src/
+ ├─ app/
+ │  ├─ main.ts
+ │  ├─ router/
+ │  ├─ stores/
+ │  └─ components/
+ ├─ features/
+ │  ├─ identity-access/
+ │  ├─ profiles-preferences/
+ │  ├─ payments-subscriptions/
+ │  ├─ service-planning/
+ │  ├─ service-execution-monitoring/
+ │  ├─ dashboard-analytics/
+ │  ├─ loyalty-engagement/
+ │  └─ system-administration/
+ ├─ assets/
+ └─ public/
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+---
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
+## 🚀 Run Locally
 ```bash
-ng generate component component-name
+npm install
+cp .env.example .env
+npm run dev
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Example `.env`:
+```
+VITE_API_BASE_URL=http://localhost:3000
+```
+---
 
+## Run Fake API (json-server)
 ```bash
-ng generate --help
+cd server
+server % json-server --watch db.json
 ```
 
-## Building
+---
 
-To build the project run:
+## 🌿 Branching Model
+We use **GitFlow**:
+- `main` → stable production-ready releases
+- `develop` → integration branch
+- `feature/*` → per bounded context or UI module
+- `release/*` → pre-release branches
+- `hotfix/*` → emergency fixes
 
-```bash
-ng build
+---
+
+## 🧩 Commit Convention
+Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
+- `feat:` → new feature or component
+- `fix:` → bug fix
+- `style:` → visual or CSS adjustment
+- `refactor:` → code refactor
+- `chore:` → config or dependency updates
+- `docs:` → README or inline documentation
+
+**Examples**
+```
+feat: add login component to identity-access
+fix: correct form validation on payment module
+style: adjust dashboard cards layout and update primary color
+refactor: move user session logic from router guard to auth service
+chore: update config and dependencies
+docs: add setup instructions and env examples in README
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+---
 
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+## 🧪 Testing & Linting
 ```bash
-ng test
+npm run lint
+npm run test
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## 🌍 Deployment
+- Dev environment: `localhost:5173`
+- Production: via GitHub Pages / Vercel / Netlify (depending on TF1 delivery)
 
-```bash
-ng e2e
-```
+---
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 👥 Authors
+Team **RPG Startup**
+- Jarod Jack Cespedes Pillco - u202318588
+- Guillermo Arturo Howard Robles – u202222275
+- David Ignacio Vivar Cesar – u202414424
+- Mike Dylan Guillen Giraldo – u202211881

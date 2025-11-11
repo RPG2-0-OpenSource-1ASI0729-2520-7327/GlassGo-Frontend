@@ -19,8 +19,10 @@ export const routes: Routes = [
       { path: 'crear-pedido', component: ComingSoonComponent, title: 'Crear Pedido - GlassGo' },
       { path: 'tracking', component: ComingSoonComponent, title: 'Tracking - GlassGo' },
       { path: 'inventario', component: ComingSoonComponent, title: 'Inventario - GlassGo' },
-      { path: 'reportes', component: ComingSoonComponent, title: 'Reportes - GlassGo' },
       { path: 'calendar', component: ComingSoonComponent, title: 'Calendario - GlassGo' },
+      { path: 'reportes', component: ComingSoonComponent, title: 'Reportes - GlassGo' },
+      { path: 'historial', component: ComingSoonComponent, title: 'Historial - GlassGo' },
+      { path: 'reclamos', component: ComingSoonComponent, title: 'Reclamos - GlassGo' },
       { path: 'administracion', component: AdministrationComponent, title: 'Administracion' }
     ]
   },
