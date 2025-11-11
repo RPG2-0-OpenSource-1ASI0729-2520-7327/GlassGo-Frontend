@@ -4,6 +4,7 @@ import { HomeComponent } from './shared/presentation/views/home/home';
 import { ComingSoonComponent } from './shared/presentation/views/coming-soon/coming-soon';
 import { PageNotFoundComponent } from './shared/presentation/views/page-not-found/page-not-found';
 import { AdministrationComponent } from './shared/presentation/views/administration/administration';
+import { DeliveryComponent } from './tracking/presentation/views/delivery/delivery';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'app/home', pathMatch: 'full' },
@@ -17,7 +18,7 @@ export const routes: Routes = [
 
       { path: 'home', component: HomeComponent, title: 'Home - GlassGo' },
       { path: 'crear-pedido', component: ComingSoonComponent, title: 'Crear Pedido - GlassGo' },
-      { path: 'tracking', component: ComingSoonComponent, title: 'Tracking - GlassGo' },
+      { path: 'tracking', component: DeliveryComponent, title: 'Tracking - GlassGo' },
       { path: 'inventario', component: ComingSoonComponent, title: 'Inventario - GlassGo' },
       { path: 'calendar', component: ComingSoonComponent, title: 'Calendario - GlassGo' },
       { path: 'reportes', component: ComingSoonComponent, title: 'Reportes - GlassGo' },
