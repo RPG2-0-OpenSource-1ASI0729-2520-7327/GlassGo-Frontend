@@ -1,4 +1,156 @@
-<div class="coming-soon">
-  <h1>🚧 Próxisdsdmamente</h1>
-  <p>Estamos trabajando en esta sección.</p>
+<div class="analytics-dashboard">
+
+  <!-- Header Section -->
+  <header class="dashboard-header">
+    <div class="header-content">
+      <div class="title-section">
+        <p>{{ 'analytics.report.description' | translate }}</p>
+      </div>
+      <div class="header-actions">
+        <button class="refresh-btn" (click)="refreshDashboard()">
+          <i class="pi pi-refresh"></i> {{ 'analytics.report.refresh' | translate }}
+        </button>
+        <button class="export-btn" (click)="exportReport()">
+          <i class="pi pi-download"></i> {{ 'analytics.report.export' | translate }}
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Dashboard Content -->
+  <div class="dashboard-content">
+
+    <!-- KPI Cards Section -->
+    <section class="kpi-section">
+      <h2>{{ 'analytics.kpi.cards-title' | translate }}</h2>
+      <div class="kpi-grid">
+
+        <!-- KPI Card 1 -->
+        <div class="kpi-card trend-down">
+          <div class="kpi-header">
+            <span class="kpi-value">2,234</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-down"></i>
+              <span class="percentage negative">-16%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.not-interested' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.see-art-connection' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- KPI Card 2 -->
+        <div class="kpi-card trend-down">
+          <div class="kpi-header">
+            <span class="kpi-value">1,242</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-down"></i>
+              <span class="percentage negative">-15%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.connection-lost' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.see-pos-connection' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- KPI Card 3 -->
+        <div class="kpi-card trend-up">
+          <div class="kpi-header">
+            <span class="kpi-value">34</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-up"></i>
+              <span class="percentage positive">+2%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.buttons-clicked' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.see-clicked-buttons' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- KPI Card 4 -->
+        <div class="kpi-card trend-up">
+          <div class="kpi-header">
+            <span class="kpi-value">5,274</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-up"></i>
+              <span class="percentage positive">+20%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.new-visits' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.share-article' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- KPI Card 5 -->
+        <div class="kpi-card trend-up">
+          <div class="kpi-header">
+            <span class="kpi-value">142</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-up"></i>
+              <span class="percentage positive">+5%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.new-followers' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.share-connection' | translate }}</p>
+          </div>
+        </div>
+
+        <!-- KPI Card 6 -->
+        <div class="kpi-card trend-up">
+          <div class="kpi-header">
+            <span class="kpi-value">4,342</span>
+            <div class="kpi-trend">
+              <i class="pi pi-arrow-up"></i>
+              <span class="percentage positive">+16%</span>
+            </div>
+          </div>
+          <div class="kpi-body">
+            <h3>{{ 'analytics.metrics.posts-clicked' | translate }}</h3>
+            <p class="kpi-action">{{ 'analytics.metrics.see-clicked-posts' | translate }}</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Chart Section -->
+    <section class="chart-section">
+      <div class="chart-container">
+        <div class="chart-header">
+          <h2>{{ 'analytics.chart.title' | translate }}</h2>
+          <div class="chart-legend">
+            <div class="legend-item">
+              <span class="legend-color july"></span>
+              <span>{{ 'analytics.chart.july-population' | translate }}</span>
+            </div>
+            <div class="legend-item">
+              <span class="legend-color august"></span>
+              <span>{{ 'analytics.chart.august-population' | translate }}</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="chart-content">
+          <!-- Real Chart.js Canvas -->
+          <div style="position: relative; height: 400px; width: 100%;">
+            <canvas
+              #chartCanvas
+              id="licoresChart"
+              style="max-height: 400px; max-width: 100%;">
+            </canvas>
+          </div>
+        </div>
+
+        <div class="chart-footer">
+          <p class="chart-subtitle">{{ 'analytics.chart.total-population' | translate }}</p>
+        </div>
+      </div>
+    </section>
+
+  </div>
 </div>
