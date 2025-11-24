@@ -4,24 +4,29 @@
     <div class="logo">{{ appTitle }}</div>
 
     <nav>
-      <a routerLink="home" routerLinkActive="active">🏠 Inicio</a>
-      <a routerLink="crear-pedido" routerLinkActive="active">🧾 Crear Pedido</a>
-      <a routerLink="tracking" routerLinkActive="active">📦 Tracking</a>
-      <a routerLink="inventario" routerLinkActive="active">📋 Inventario</a>
-      <a routerLink="calendar" routerLinkActive="active">📅 Calendario</a>
-      <a routerLink="reportes" routerLinkActive="active">📊 Reportes</a>
-      <a routerLink="historial" routerLinkActive="active">📜 Historial</a>
-      <a routerLink="reclamos" routerLinkActive="active">⚠️ Reclamos</a>
-      <a routerLink="administracion" routerLinkActive="active">🗓️ Administracion</a>
+      <a routerLink="home" routerLinkActive="active">🏠 {{ 'option.home' | translate }}</a>
+      <a routerLink="crear-pedido" routerLinkActive="active">🧾 {{ 'navigation.create-order' | translate }}</a>
+      <a routerLink="tracking" routerLinkActive="active">📦 {{ 'navigation.tracking' | translate }}</a>
+      <a routerLink="inventario" routerLinkActive="active">📋 {{ 'navigation.inventory' | translate }}</a>
+      <a routerLink="calendar" routerLinkActive="active">📅 {{ 'navigation.calendar' | translate }}</a>
+      <a routerLink="reportes" routerLinkActive="active">📊 {{ 'navigation.reports' | translate }}</a>
+      <a routerLink="historial" routerLinkActive="active">📜 {{ 'navigation.history' | translate }}</a>
+      <a routerLink="reclamos" routerLinkActive="active">⚠️ {{ 'navigation.claims' | translate }}</a>
+      <a routerLink="administracion" routerLinkActive="active">🗓️ {{ 'navigation.administration' | translate }}</a>
     </nav>
 
-    <button class="logout" (click)="logout()">Cerrar sesión</button>
+    <button class="logout" (click)="logout()">{{ 'navigation.logout' | translate }}</button>
   </aside>
 
   <!-- Contenido principal -->
   <main class="main-content">
     <header class="breadcrumb">
       <h2>{{ currentRoute }}</h2>
+
+      <!-- Language Switcher -->
+      <div class="header-actions">
+        <app-language-switcher></app-language-switcher>
+      </div>
     </header>
 
     <section class="content-wrapper">
