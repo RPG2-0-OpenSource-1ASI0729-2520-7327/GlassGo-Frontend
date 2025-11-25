@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Observable, map } from 'rxjs';
-import { Report, ReportFilter } from '../domain/model/report';
-import { ReportResource, AnalyticsResponse, DashboardSummaryResponse } from './report-resource';
-import { ReportAssembler } from './report-assembler';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {map, Observable} from 'rxjs';
+import {Report, ReportFilter} from '../domain/model/report';
+import {DashboardSummaryResponse, ReportResource} from './report-resource';
+import {ReportAssembler} from './report-assembler';
 
 /**
  * API endpoint for reports and analytics data.

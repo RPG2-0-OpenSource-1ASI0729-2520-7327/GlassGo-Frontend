@@ -1,4 +1,4 @@
-import { BaseEntity } from '../../../shared/domain/model/base-entity';
+import {BaseEntity} from '../../../shared/domain/model/base-entity';
 
 /**
  * Report entity representing a business report.

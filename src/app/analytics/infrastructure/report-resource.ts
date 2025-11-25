@@ -1,4 +1,4 @@
-import { BaseResource, BaseResponse } from './base-response';
+import {BaseResource, BaseResponse} from './base-response';
 
 /**
  * Report resource structure for API communication.

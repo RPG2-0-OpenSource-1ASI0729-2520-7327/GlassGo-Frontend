@@ -1,8 +1,8 @@
-import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, combineLatest, map, catchError, of, switchMap, tap } from 'rxjs';
-import { Report, Metric, ChartData, ReportFilter } from '../domain/model/report';
-import { ReportApiEndpoint } from '../infrastructure/report-api-endpoint';
-import { DashboardSummaryResponse } from '../infrastructure/report-resource';
+import {Injectable} from '@angular/core';
+import {BehaviorSubject, catchError, combineLatest, map, Observable, of, tap} from 'rxjs';
+import {ChartData, Metric, Report, ReportFilter} from '../domain/model/report';
+import {ReportApiEndpoint} from '../infrastructure/report-api-endpoint';
+import {DashboardSummaryResponse} from '../infrastructure/report-resource';
 
 /**
  * Dashboard state interface.

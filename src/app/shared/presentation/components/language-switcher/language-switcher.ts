@@ -1,12 +1,12 @@
-import { Component, OnInit, OnDestroy, inject } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { TranslateService, TranslateModule } from '@ngx-translate/core';
-import { Subject, takeUntil, firstValueFrom } from 'rxjs';
+import {Component, inject, OnDestroy, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HttpClient} from '@angular/common/http';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
+import {firstValueFrom, Subject, takeUntil} from 'rxjs';
 
 // PrimeNG Components
-import { ButtonModule } from 'primeng/button';
-import { TooltipModule } from 'primeng/tooltip';
+import {ButtonModule} from 'primeng/button';
+import {TooltipModule} from 'primeng/tooltip';
 
 export type SupportedLanguage = 'es' | 'en';
 

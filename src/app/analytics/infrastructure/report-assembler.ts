@@ -1,13 +1,7 @@
-import { Injectable } from '@angular/core';
-import { BaseAssembler } from '../../shared/infrastructure/base-assembler';
-import { Report, Metric, ChartData, Dataset, ReportType, ChartType, TrendType } from '../domain/model/report';
-import {
-  ReportResource,
-  MetricResource,
-  ChartDataResource,
-  DatasetResource,
-  AnalyticsResponse
-} from './report-resource';
+import {Injectable} from '@angular/core';
+import {BaseAssembler} from '../../shared/infrastructure/base-assembler';
+import {ChartData, ChartType, Dataset, Metric, Report, ReportType, TrendType} from '../domain/model/report';
+import {AnalyticsResponse, ChartDataResource, DatasetResource, MetricResource, ReportResource} from './report-resource';
 
 /**
  * Assembler for converting between Report entities and resources.

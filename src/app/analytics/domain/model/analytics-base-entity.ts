@@ -1,4 +1,4 @@
-import { BaseEntity } from '../../../shared/domain/model/base-entity';
+import {BaseEntity} from '../../../shared/domain/model/base-entity';
 
 /**
  * Analytics specific base entity extending the shared BaseEntity.

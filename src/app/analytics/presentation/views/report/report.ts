@@ -1,8 +1,8 @@
-import { Component, OnInit, OnDestroy, ViewChild, ElementRef, AfterViewInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
-import { Chart, registerables } from 'chart.js';
-import { Subject, takeUntil } from 'rxjs';
+import {AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {TranslateModule, TranslateService} from '@ngx-translate/core';
+import {Chart, registerables} from 'chart.js';
+import {Subject, takeUntil} from 'rxjs';
 
 /**
  * Component for displaying analytics dashboard with charts and reports.

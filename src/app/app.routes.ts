@@ -1,10 +1,10 @@
-import { Routes } from '@angular/router';
-import { LayoutComponent } from './shared/presentation/components/layout/layout';
-import { HomeComponent } from './shared/presentation/views/home/home';
-import { ComingSoonComponent } from './shared/presentation/views/coming-soon/coming-soon';
-import { PageNotFoundComponent } from './shared/presentation/views/page-not-found/page-not-found';
-import { AdministrationComponent } from './shared/presentation/views/administration/administration';
-import { AnalyticComponent } from './analytics/presentation/views/report/report';
+import {Routes} from '@angular/router';
+import {LayoutComponent} from './shared/presentation/components/layout/layout';
+import {HomeComponent} from './shared/presentation/views/home/home';
+import {ComingSoonComponent} from './shared/presentation/views/coming-soon/coming-soon';
+import {PageNotFoundComponent} from './shared/presentation/views/page-not-found/page-not-found';
+import {AdministrationComponent} from './shared/presentation/views/administration/administration';
+import {AnalyticComponent} from './analytics/presentation/views/report/report';
 
 /**
  * Application routes configuration for the GlassGo app.

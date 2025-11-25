@@ -1,11 +1,11 @@
-import { Component } from '@angular/core';
-import { Router, RouterLink, RouterLinkActive, RouterOutlet, NavigationEnd } from '@angular/router';
-import { CommonModule } from '@angular/common';
-import { TranslateModule } from '@ngx-translate/core';
-import { filter } from 'rxjs/operators';
+import {Component} from '@angular/core';
+import {NavigationEnd, Router, RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
+import {CommonModule} from '@angular/common';
+import {TranslateModule} from '@ngx-translate/core';
+import {filter} from 'rxjs/operators';
 
 // Components
-import { LanguageSwitcher } from '../language-switcher/language-switcher';
+import {LanguageSwitcher} from '../language-switcher/language-switcher';
 
 /**
  * Layout component that provides the main application structure with navigation and routing.

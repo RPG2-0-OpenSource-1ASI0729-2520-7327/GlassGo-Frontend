@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {Component, OnInit} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {HttpClient, HttpClientModule} from '@angular/common/http';
 
 /**
  * Component for displaying administration data including distributors and liquor stores.
