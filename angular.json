@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "learning-center7327": {
+    "glass-go": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -34,12 +34,12 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
+                  "maximumWarning": "700kB",
                   "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
+                  "maximumWarning": "5kB",
                   "maximumError": "8kB"
                 }
               ],
@@ -63,10 +63,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "learning-center7327:build:production"
+              "buildTarget": "glass-go:build:production"
             },
             "development": {
-              "buildTarget": "learning-center7327:build:development"
+              "buildTarget": "glass-go:build:development"
             }
           },
           "defaultConfiguration": "development"

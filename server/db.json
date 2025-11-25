@@ -6,7 +6,7 @@
       "role": "admin"
     }
   ],
-  "homeStats": [
+  "home-stats": [
     {
       "id": 1,
       "activeOrders": 230,
