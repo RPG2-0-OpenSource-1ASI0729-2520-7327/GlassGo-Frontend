@@ -70,16 +70,34 @@
   flex-direction: column;
 }
 
+/* BREADCRUMB HEADER */
 .breadcrumb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: white;
   padding: 1rem 1.5rem;
   border-bottom: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
 }
 
 .breadcrumb h2 {
   margin: 0;
-  color: #1e293b;
   font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* Header Actions */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Language Switcher Integration */
+.header-actions app-language-switcher {
+  display: flex;
 }
 
 .content-wrapper {
@@ -87,4 +105,3 @@
   padding: 1.5rem;
   overflow-y: auto;
 }
-

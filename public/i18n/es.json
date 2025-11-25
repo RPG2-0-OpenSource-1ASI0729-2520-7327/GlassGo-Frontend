@@ -1,4 +1,4 @@
-﻿{
+{
   "option": {
     "home": "Inicio",
     "about": "Acerca de",
@@ -6,13 +6,54 @@
     "courses": "Cursos",
     "places": "Lugares"
   },
+  "navigation": {
+    "create-order": "Crear Pedido",
+    "tracking": "Tracking",
+    "inventory": "Inventario",
+    "calendar": "Calendario",
+    "reports": "Reportes",
+    "history": "Historial",
+    "claims": "Reclamos",
+    "administration": "Administración",
+    "logout": "Cerrar sesión"
+  },
   "about": {
     "title": "Acerca de Nosotros",
     "content": "Learning Center-7327 es una Plataforma educativa empresarial, parte de Logo Corporation."
   },
   "home": {
     "title": "Bienvenido",
-    "content": "Bienvenido a Learning Center-7327."
+    "content": "Bienvenido a Learning Center-7327.",
+    "welcome-greeting": "Hola, {{userName}}",
+    "welcome-description": "Aquí tienes el resumen de tus operaciones de hoy.",
+    "stats": {
+      "active-orders": "Pedidos activos",
+      "stock-available": "Stock disponible",
+      "estimated-time": "Tiempo estimado",
+      "avoided-orders": "Pedidos evitados"
+    },
+    "sections": {
+      "tracking-orders": "Tracking y Pedidos recientes",
+      "inventory": "Inventario",
+      "reports": "Reportes",
+      "calendar": "Calendario"
+    },
+    "actions": {
+      "see-more": "Ver más"
+    },
+    "tracking": {
+      "tracking-number": "Número de seguimiento"
+    },
+    "inventory": {
+      "status": "Estado",
+      "tracking-number": "Nº seguimiento"
+    },
+    "reports": {
+      "description": "Visualizar reportes."
+    },
+    "calendar": {
+      "order-number": "Orden número"
+    }
   },
   "places": {
     "list-title": "Lugares",
@@ -49,9 +90,77 @@
     "create": "Crear Categoría",
     "update": "Actualizar Categoría",
     "cancel": "Cancelar",
+    "success-create": "Categoría creada exitosamente",
+    "success-update": "Categoría actualizada exitosamente",
+    "success-delete": "Categoría eliminada exitosamente",
     "error": {
       "name-required": "El nombre es obligatorio"
     }
+  },
+  "analytics": {
+    "report": {
+      "title": "Reporte",
+      "description": "Analiza rendimiento, costos y eficiencia en reportes fáciles de entender.",
+      "loading": "Cargando datos...",
+      "error": "Error al cargar los datos",
+      "no-data": "No hay datos disponibles",
+      "last-updated": "Última actualización",
+      "refresh": "Actualizar",
+      "export": "Exportar",
+      "filter": "Filtrar",
+      "clear-filter": "Limpiar filtros"
+    },
+    "metrics": {
+      "not-interested": "No están interesados",
+      "connection-lost": "Conexión perdida",
+      "buttons-clicked": "Número de botones clickeados",
+      "new-visits": "Nuevas visitas",
+      "new-followers": "Nuevos seguidores",
+      "posts-clicked": "Número de posts clickeados",
+      "see-art-connection": "Ver conexión de arte",
+      "see-pos-connection": "Ver conexión de pos",
+      "see-clicked-buttons": "Ver botones clickeados",
+      "share-article": "Compartir artículo",
+      "share-connection": "Compartir conexión con...",
+      "see-clicked-posts": "Ver posts clickeados"
+    },
+    "chart": {
+      "title": "Licores Populares por Zonas",
+      "july-population": "Población Julio",
+      "august-population": "Población Agosto",
+      "total-population": "Población Total",
+      "zones": {
+        "title": "Tipos de Licores",
+        "smirnuff": "Smirnuff",
+        "juger": "Juger",
+        "pisco": "Pisco",
+        "cerveza": "Cerveza",
+        "vodka": "Vodka"
+      }
+    },
+    "kpi": {
+      "cards-title": "Métricas Principales",
+      "trend-up": "Tendencia al alza",
+      "trend-down": "Tendencia a la baja",
+      "trend-stable": "Estable",
+      "trend-neutral": "Neutral",
+      "test-message": "Si puedes ver esto, el componente está cargando correctamente."
+    },
+    "filter": {
+      "date-range": "Rango de fechas",
+      "start-date": "Fecha inicio",
+      "end-date": "Fecha fin",
+      "report-type": "Tipo de reporte",
+      "zone": "Zona",
+      "status": "Estado",
+      "apply": "Aplicar",
+      "clear": "Limpiar"
+    }
+  },
+  "coming-soon": {
+    "title": "🚧 Próximamente",
+    "description": "Estamos trabajando en esta sección.",
+    "message": "Esta funcionalidad estará disponible pronto."
   },
   "courses": {
     "list-title": "Cursos",
@@ -80,3 +189,4 @@
     }
   }
 }
+

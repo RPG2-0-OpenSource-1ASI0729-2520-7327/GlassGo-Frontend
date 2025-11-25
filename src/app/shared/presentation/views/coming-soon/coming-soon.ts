@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-coming-soon',
   standalone: true,
-  imports: [CommonModule],
-  template: `<div class="coming"><h2>🚧 Próximamente</h2><p>Estamos trabajando en esta sección.</p></div>`,
-  styles: [`.coming{ text-align:center; padding:40px } .coming h2{ color:#0f62fe }`]
+  imports: [CommonModule, TranslateModule],
+  templateUrl: './coming-soon.html',
+  styleUrls: ['./coming-soon.css']
 })
 export class ComingSoonComponent {}
