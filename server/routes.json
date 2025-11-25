@@ -1,8 +1,3 @@
-﻿{
-  "/api/v1/*": "/$1",
-  "/analytics/dashboard": "/analytics/dashboard",
-  "/analytics/reports": "/analytics/reports",
-  "/analytics/kpis": "/analytics/kpis",
-  "/analytics/reports/:id/charts": "/analytics/chartData"
+{
+  "/api/v1/*": "/$1"
 }
-
