@@ -7,6 +7,9 @@ import { filter } from 'rxjs/operators';
 // Components
 import { LanguageSwitcher } from '../language-switcher/language-switcher';
 
+/**
+ * Layout component that provides the main application structure with navigation and routing.
+ */
 @Component({
   selector: 'app-layout',
   standalone: true,
@@ -22,9 +25,20 @@ import { LanguageSwitcher } from '../language-switcher/language-switcher';
   styleUrl: './layout.css'
 })
 export class LayoutComponent {
+  /**
+   * The application title displayed in the layout.
+   */
   appTitle = 'GlassGo';
+
+  /**
+   * The current route name for breadcrumb display.
+   */
   currentRoute = '';
 
+  /**
+   * Constructor for LayoutComponent.
+   * @param router - The Angular Router instance.
+   */
   constructor(private router: Router) {
     // Detectar ruta actual y mostrar nombre en breadcrumb
     this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: any) => {
@@ -33,6 +47,11 @@ export class LayoutComponent {
     });
   }
 
+  /**
+   * Maps a route path to a human-readable name.
+   * @param path - The route path.
+   * @returns The display name for the route.
+   */
   mapRouteToName(path: string): string {
     if (path.includes('home')) return 'Inicio';
     if (path.includes('crear-pedido')) return 'Crear Pedido';
@@ -45,6 +64,9 @@ export class LayoutComponent {
     return 'Página no encontrada';
   }
 
+  /**
+   * Logs out the user and navigates to the home page.
+   */
   logout() {
     alert('Sesión cerrada');
     this.router.navigate(['/home']);

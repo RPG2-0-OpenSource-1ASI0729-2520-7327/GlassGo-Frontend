@@ -8,14 +8,41 @@ import { DashboardSummaryResponse } from '../infrastructure/report-resource';
  * Dashboard state interface.
  */
 export interface DashboardState {
+  /**
+   * Array of reports in the dashboard.
+   */
   reports: Report[];
+  /**
+   * The currently selected report.
+   */
   currentReport: Report | null;
+  /**
+   * Array of KPI metrics.
+   */
   kpiMetrics: Metric[];
+  /**
+   * Array of chart data.
+   */
   chartData: ChartData[];
+  /**
+   * Dashboard summary data.
+   */
   dashboardSummary: DashboardSummaryResponse | null;
+  /**
+   * Current filter applied to the dashboard.
+   */
   filter: ReportFilter;
+  /**
+   * Indicates if data is currently loading.
+   */
   isLoading: boolean;
+  /**
+   * Error message if any operation failed.
+   */
   error: string | null;
+  /**
+   * Timestamp of the last update.
+   */
   lastUpdated: Date | null;
 }
 

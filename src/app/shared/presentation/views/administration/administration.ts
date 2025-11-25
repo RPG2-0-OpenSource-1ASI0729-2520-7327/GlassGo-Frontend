@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+/**
+ * Component for displaying administration data including distributors and liquor stores.
+ */
 @Component({
   selector: 'app-administration',
   standalone: true,
@@ -10,11 +13,25 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
   styleUrls: ['./administration.css']
 })
 export class AdministrationComponent implements OnInit {
+  /**
+   * Array of distributor clients.
+   */
   distribuidoras: any[] = [];
+
+  /**
+   * Array of liquor store clients.
+   */
   licorerias: any[] = [];
 
+  /**
+   * Constructor for AdministrationComponent.
+   * @param http - The HttpClient instance for API calls.
+   */
   constructor(private http: HttpClient) {}
 
+  /**
+   * Lifecycle hook called after component initialization. Loads client data.
+   */
   ngOnInit(): void {
     this.http.get<any[]>('http://localhost:3000/clientes').subscribe({
       next: (data) => {

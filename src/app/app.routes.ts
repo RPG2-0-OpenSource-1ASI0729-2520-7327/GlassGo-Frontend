@@ -6,6 +6,10 @@ import { PageNotFoundComponent } from './shared/presentation/views/page-not-foun
 import { AdministrationComponent } from './shared/presentation/views/administration/administration';
 import { AnalyticComponent } from './analytics/presentation/views/report/report';
 
+/**
+ * Application routes configuration for the GlassGo app.
+ * Defines the routing structure with lazy loading and redirects.
+ */
 export const routes: Routes = [
   { path: '', redirectTo: 'app/home', pathMatch: 'full' },
 
