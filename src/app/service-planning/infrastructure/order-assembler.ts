@@ -8,8 +8,24 @@ import {
   DeliveryInformationResource
 } from './order-resource';
 
+/**
+ * Assembler for converting between Order domain entities and Order resources.
+ * Handles the transformation of orders, order items, and delivery information.
+ * @example
+ * ```typescript
+ * const assembler = new OrderAssembler();
+ * const orderResource: OrderResource = { id: 1, orderNumber: 'ORD-001', ... };
+ * const order = assembler.toDomainModel(orderResource);
+ * const resource = assembler.toResource(order);
+ * ```
+ */
 export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
 
+  /**
+   * Converts an Order resource to an Order domain entity.
+   * @param resource - The Order resource from the API.
+   * @returns The corresponding Order domain entity.
+   */
   toDomainModel(resource: OrderResource): Order {
     const deliveryInfo = this.deliveryInformationToDomainModel(resource.deliveryInformation);
     const items = resource.items.map(item => this.orderItemToDomainModel(item));
@@ -24,6 +40,11 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
     );
   }
 
+  /**
+   * Converts an Order domain entity to an Order resource.
+   * @param domainModel - The Order domain entity.
+   * @returns The corresponding Order resource for API communication.
+   */
   toResource(domainModel: Order): OrderResource {
     return {
       id: domainModel.id,
@@ -40,6 +61,12 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
     };
   }
 
+  /**
+   * Converts an OrderItem resource to an OrderItem domain entity.
+   * @param resource - The OrderItem resource.
+   * @returns The OrderItem domain entity.
+   * @private
+   */
   private orderItemToDomainModel(resource: OrderItemResource): OrderItem {
     return new OrderItem(
       resource.id,
@@ -50,6 +77,12 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
     );
   }
 
+  /**
+   * Converts an OrderItem domain entity to an OrderItem resource.
+   * @param domainModel - The OrderItem domain entity.
+   * @returns The OrderItem resource.
+   * @private
+   */
   private orderItemToResource(domainModel: OrderItem): OrderItemResource {
     return {
       id: domainModel.id,
@@ -63,6 +96,12 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
     };
   }
 
+  /**
+   * Converts a DeliveryInformation resource to a DeliveryInformation domain entity.
+   * @param resource - The DeliveryInformation resource.
+   * @returns The DeliveryInformation domain entity.
+   * @private
+   */
   private deliveryInformationToDomainModel(resource: DeliveryInformationResource): DeliveryInformation {
     return new DeliveryInformation(
       resource.id,
@@ -73,6 +112,12 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
     );
   }
 
+  /**
+   * Converts a DeliveryInformation domain entity to a DeliveryInformation resource.
+   * @param domainModel - The DeliveryInformation domain entity.
+   * @returns The DeliveryInformation resource.
+   * @private
+   */
   private deliveryInformationToResource(domainModel: DeliveryInformation): DeliveryInformationResource {
     return {
       id: domainModel.id,

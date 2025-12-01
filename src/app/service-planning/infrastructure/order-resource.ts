@@ -1,3 +1,6 @@
+/**
+ * Resource structure for OrderItem data transfer between API and application.
+ */
 export interface OrderItemResource {
   id: number;
   productId: number;
@@ -9,6 +12,9 @@ export interface OrderItemResource {
   updatedAt: string;
 }
 
+/**
+ * Resource structure for DeliveryInformation data transfer between API and application.
+ */
 export interface DeliveryInformationResource {
   id: number;
   deliveryDate: string;
@@ -19,6 +25,9 @@ export interface DeliveryInformationResource {
   updatedAt: string;
 }
 
+/**
+ * Resource structure for Order data transfer between API and application.
+ */
 export interface OrderResource {
   id: number;
   orderNumber: string;

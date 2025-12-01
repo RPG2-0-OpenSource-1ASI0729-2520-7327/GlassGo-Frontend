@@ -4,6 +4,10 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { Chart, registerables } from 'chart.js';
 import { Subject, takeUntil } from 'rxjs';
 
+/**
+ * Component for displaying analytics reports and charts in the analytics bounded context.
+ * Handles chart rendering and KPI metrics visualization.
+ */
 @Component({
   selector: 'app-analytics-dashboard',
   standalone: true,
@@ -41,12 +45,19 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
     ]
   }];
 
+  /**
+   * Creates an instance of AnalyticComponent.
+   * @param translate - Service for handling translations.
+   */
   constructor(private translate: TranslateService) {
     console.log('🚀 AnalyticComponent constructor called');
     // Register Chart.js components
     Chart.register(...registerables);
   }
 
+  /**
+   * Initializes the component and sets up subscriptions.
+   */
   ngOnInit(): void {
     console.log('🚀 AnalyticComponent ngOnInit called');
     console.log('🚀 Component should be visible now');
@@ -66,11 +77,19 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
       });
   }
 
+  /**
+   * Lifecycle hook called after the component's view has been initialized.
+   * Creates the initial chart.
+   */
   ngAfterViewInit(): void {
     console.log('🚀 ngAfterViewInit called - Creating chart');
     this.createChart();
   }
 
+  /**
+   * Lifecycle hook called when the component is destroyed.
+   * Cleans up subscriptions and destroys the chart.
+   */
   ngOnDestroy(): void {
     console.log('🚀 AnalyticComponent ngOnDestroy called');
     this.destroy$.next();
@@ -80,6 +99,11 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  /**
+   * Creates the Chart.js chart with the analytics data.
+   * Falls back to a canvas-based chart if Chart.js fails.
+   * @private
+   */
   private createChart(): void {
     try {
       const ctx = this.chartCanvas.nativeElement.getContext('2d');
@@ -162,6 +186,10 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  /**
+   * Creates a fallback chart using native canvas API if Chart.js fails.
+   * @private
+   */
   private createFallbackChart(): void {
     console.log('🚀 Creating fallback canvas chart');
     try {
@@ -241,6 +269,9 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  /**
+   * Refreshes the dashboard data and animates the refresh button.
+   */
   refreshDashboard(): void {
     console.log('🔄 Refreshing dashboard data...');
     // Add refresh animation to button
@@ -253,6 +284,9 @@ export class AnalyticComponent implements OnInit, OnDestroy, AfterViewInit {
     }
   }
 
+  /**
+   * Exports the current report data as a JSON file.
+   */
   exportReport(): void {
     console.log('📊 Exporting report...');
     // Simple export simulation

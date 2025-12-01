@@ -5,6 +5,15 @@ import { TranslateService, TranslateModule } from '@ngx-translate/core';
 import { CreateOrderStore } from '../../../application/create-order.store';
 import { DeliveryInformation } from '../../../domain/model/delivery-information';
 
+/**
+ * Component for creating orders in the service planning bounded context.
+ * Provides a form for entering delivery information and submitting orders.
+ * @example
+ * ```typescript
+ * // In template: <app-create-order></app-create-order>
+ * // Component handles form submission and order creation
+ * ```
+ */
 @Component({
   selector: 'app-create-order',
   standalone: true,
@@ -23,6 +32,9 @@ export class CreateOrderComponent implements OnInit {
     this.orderForm = this.createOrderForm();
   }
 
+  /**
+   * Initializes the component and subscribes to order changes.
+   */
   ngOnInit(): void {
     // Subscribe to order changes to update UI
     this.createOrderStore.currentOrder$.subscribe(order => {
@@ -30,6 +42,11 @@ export class CreateOrderComponent implements OnInit {
     });
   }
 
+  /**
+   * Creates the order form with validation.
+   * @returns The FormGroup for the order form.
+   * @private
+   */
   private createOrderForm(): FormGroup {
     return this.formBuilder.group({
       deliveryDate: ['', [Validators.required]],
@@ -39,6 +56,9 @@ export class CreateOrderComponent implements OnInit {
     });
   }
 
+  /**
+   * Gets the order summary for display.
+   */
   get orderSummary() {
     const currentOrder = this.createOrderStore.currentOrder;
     return {
@@ -50,6 +70,9 @@ export class CreateOrderComponent implements OnInit {
     };
   }
 
+  /**
+   * Handles the submission of the order form.
+   */
   onSubmitOrder(): void {
     if (this.orderForm.valid) {
       const formData = this.orderForm.value;
@@ -81,11 +104,18 @@ export class CreateOrderComponent implements OnInit {
     }
   }
 
+  /**
+   * Cancels the order creation and resets the form and store.
+   */
   onCancel(): void {
     this.orderForm.reset();
     this.createOrderStore.resetOrder();
   }
 
+  /**
+   * Marks all form controls as touched to show validation errors.
+   * @private
+   */
   private markFormGroupTouched(): void {
     Object.keys(this.orderForm.controls).forEach(key => {
       const control = this.orderForm.get(key);
@@ -95,7 +125,9 @@ export class CreateOrderComponent implements OnInit {
     });
   }
 
-
+  /**
+   * Checks if the form is valid.
+   */
   get isFormValid(): boolean {
     return this.orderForm.valid;
   }

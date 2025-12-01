@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core';
 
+/**
+ * Home component displaying dashboard overview with stats, tracking, inventory, and calendar data.
+ */
 @Component({
   selector: 'app-home',
   standalone: true,
@@ -17,8 +20,15 @@ export class HomeComponent implements OnInit {
   inventory: any[] = [];
   calendar: any[] = [];
 
+  /**
+   * Creates an instance of HomeComponent.
+   * @param http - HTTP client for loading data.
+   */
   constructor(private http: HttpClient) {}
 
+  /**
+   * Initializes the component and loads dashboard data.
+   */
   ngOnInit() {
     this.http.get<any>('assets/db.json').subscribe(data => {
       this.stats = data.stats;

@@ -1,6 +1,10 @@
 import {Component} from '@angular/core';
 import {TranslatePipe} from '@ngx-translate/core';
 
+/**
+ * Component for displaying footer content across the application.
+ * Provides consistent footer information and links.
+ */
 @Component({
   selector: 'app-footer-content',
   imports: [TranslatePipe],

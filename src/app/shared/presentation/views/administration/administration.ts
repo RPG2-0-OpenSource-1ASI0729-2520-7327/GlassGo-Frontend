@@ -2,6 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
+/**
+ * Component for administration view displaying clients data.
+ * Shows lists of distributors and liquor stores.
+ */
 @Component({
   selector: 'app-administration',
   standalone: true,
@@ -13,8 +17,15 @@ export class AdministrationComponent implements OnInit {
   distribuidoras: any[] = [];
   licorerias: any[] = [];
 
+  /**
+   * Creates an instance of AdministrationComponent.
+   * @param http - HTTP client for API calls.
+   */
   constructor(private http: HttpClient) {}
 
+  /**
+   * Initializes the component and loads client data.
+   */
   ngOnInit(): void {
     this.http.get<any[]>('http://localhost:3000/clientes').subscribe({
       next: (data) => {

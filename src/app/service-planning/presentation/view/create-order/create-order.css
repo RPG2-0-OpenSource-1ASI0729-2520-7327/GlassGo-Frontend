@@ -1,3 +1,7 @@
+/**
+ * Main container for the create order view
+ * Centers content with max-width and provides consistent padding
+ */
 .create-order-container {
   padding: 20px;
   max-width: 1400px;
@@ -5,6 +9,9 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
+/**
+ * Page title styling
+ */
 .page-title h1 {
   font-size: 32px;
   font-weight: 600;
@@ -12,7 +19,10 @@
   margin-bottom: 30px;
 }
 
-/* Header Section */
+/**
+ * Header section with gradient background
+ * Displays the page title and business context subtitle
+ */
 .header-section {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   color: white;
@@ -22,12 +32,18 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
+/**
+ * Main title in header - displays service planning context
+ */
 .header-title {
   font-size: 28px;
   font-weight: 700;
   margin-bottom: 8px;
 }
 
+/**
+ * Subtitle for additional context and user guidance
+ */
 .header-subtitle {
   font-size: 16px;
   opacity: 0.9;
@@ -35,7 +51,11 @@
   color: #1abc9c;
 }
 
-/* Content Layout */
+/**
+ * Grid layout for form and summary sections
+ * 2-column layout: Form (2fr) + Summary (1fr)
+ * Responsive: Stacks to single column on mobile
+ */
 .content-layout {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -43,6 +63,9 @@
   align-items: start;
 }
 
+/**
+ * Mobile breakpoint: Stack form and summary vertically
+ */
 @media (max-width: 768px) {
   .content-layout {
     grid-template-columns: 1fr;
@@ -50,7 +73,10 @@
   }
 }
 
-/* Form Section */
+/**
+ * Container for the delivery information form
+ * Card-style with shadow for visual hierarchy
+ */
 .form-section {
   background: white;
   border-radius: 12px;
@@ -58,10 +84,16 @@
   overflow: hidden;
 }
 
+/**
+ * Form wrapper with padding
+ */
 .delivery-form {
   padding: 30px;
 }
 
+/**
+ * Form section header with bottom border
+ */
 .form-header h3 {
   font-size: 22px;
   font-weight: 600;
@@ -71,10 +103,18 @@
   border-bottom: 2px solid #ecf0f1;
 }
 
+/**
+ * Individual form field wrapper
+ * Provides consistent spacing between form elements
+ */
 .form-group {
   margin-bottom: 25px;
 }
 
+/**
+ * Form field label styling
+ * Clear, readable labels for accessibility
+ */
 .form-label {
   display: block;
   font-size: 14px;
@@ -83,6 +123,10 @@
   margin-bottom: 8px;
 }
 
+/**
+ * Base styling for form inputs and textareas
+ * Includes focus states and transitions for better UX
+ */
 .form-input,
 .form-textarea {
   width: 100%;
@@ -94,6 +138,10 @@
   box-sizing: border-box;
 }
 
+/**
+ * Focus state for form inputs
+ * Blue border and subtle shadow for clear focus indication
+ */
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
@@ -101,18 +149,29 @@
   box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
 }
 
+/**
+ * Placeholder text styling
+ */
 .form-input::placeholder,
 .form-textarea::placeholder {
   color: #95a5a6;
   font-style: italic;
 }
 
+/**
+ * Error state for invalid form fields
+ * Red border and shadow to indicate validation errors
+ */
 .form-input.error,
 .form-textarea.error {
   border-color: #e74c3c;
   box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
 }
 
+/**
+ * Validation error message styling
+ * Displayed below invalid fields
+ */
 .error-message {
   color: #e74c3c;
   font-size: 14px;
@@ -120,12 +179,19 @@
   font-weight: 500;
 }
 
+/**
+ * Textarea-specific styling
+ * Allows vertical resizing only
+ */
 .form-textarea {
   resize: vertical;
   min-height: 100px;
 }
 
-/* Form Actions */
+/**
+ * Container for form action buttons
+ * Right-aligned with consistent spacing
+ */
 .form-actions {
   display: flex;
   gap: 15px;
@@ -135,6 +201,10 @@
   border-top: 1px solid #ecf0f1;
 }
 
+/**
+ * Base button styling
+ * Consistent size and appearance across all buttons
+ */
 .btn {
   padding: 12px 25px;
   border: none;
@@ -146,39 +216,65 @@
   min-width: 120px;
 }
 
+/**
+ * Cancel button styling
+ * Neutral gray color for secondary action
+ */
 .btn-cancel {
   background: #95a5a6;
   color: white;
 }
 
+/**
+ * Cancel button hover state
+ */
 .btn-cancel:hover {
   background: #7f8c8d;
   transform: translateY(-2px);
 }
 
+/**
+ * Submit button styling
+ * Primary action with brand color (teal/green)
+ */
 .btn-submit {
   background: #1abc9c;
   color: white;
 }
 
+/**
+ * Submit button hover state
+ * Enhanced with shadow and lift effect
+ */
 .btn-submit:hover:not(:disabled) {
   background: #16a085;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(26, 188, 156, 0.3);
 }
 
+/**
+ * Disabled submit button state
+ * Shown when form validation fails
+ */
 .btn-submit:disabled {
   background: #bdc3c7;
   cursor: not-allowed;
   transform: none;
 }
 
-/* Summary Section */
+/**
+ * Sticky summary section wrapper
+ * Remains visible as user scrolls through long forms
+ */
 .summary-section {
   position: sticky;
   top: 20px;
 }
 
+/**
+ * Order summary card container
+ * Displays calculated order totals from the domain model
+ */
 .order-summary-card {
   background: #f8f9fa;
   border-radius: 12px;
@@ -187,6 +283,9 @@
   border: 1px solid #e9ecef;
 }
 
+/**
+ * Summary section title
+ */
 .summary-title {
   font-size: 20px;
   font-weight: 700;
@@ -196,6 +295,10 @@
   border-bottom: 2px solid #dee2e6;
 }
 
+/**
+ * Individual summary line item
+ * Displays label and value pairs (e.g., Subtotal: $100)
+ */
 .summary-item {
   display: flex;
   justify-content: space-between;
@@ -204,22 +307,38 @@
   border-bottom: 1px solid #e9ecef;
 }
 
+/**
+ * Remove border from last summary item
+ */
 .summary-item:last-child {
   border-bottom: none;
 }
 
+/**
+ * Summary item label styling
+ * Left-aligned text describing the value
+ */
 .summary-label {
   font-size: 14px;
   color: #6c757d;
   font-weight: 500;
 }
 
+/**
+ * Summary item value styling
+ * Right-aligned numeric values
+ */
 .summary-value {
   font-size: 16px;
   font-weight: 600;
   color: #2c3e50;
 }
 
+/**
+ * Total row styling
+ * Highlighted with background color for emphasis
+ * Represents the final calculated order total
+ */
 .summary-total {
   background: #e8f5e8;
   margin: 15px -10px 0;
@@ -228,19 +347,29 @@
   border: none !important;
 }
 
+/**
+ * Total label styling - larger and bolder
+ */
 .summary-total .summary-label {
   font-size: 16px;
   font-weight: 700;
   color: #2c3e50;
 }
 
+/**
+ * Total value styling - prominent display
+ * Uses success color (green) to indicate final amount
+ */
 .summary-total .summary-value {
   font-size: 18px;
   font-weight: 700;
   color: #27ae60;
 }
 
-/* Responsive adjustments */
+/**
+ * Mobile optimization for screens 768px and below
+ * Adjusts padding, layout, and button arrangement
+ */
 @media (max-width: 768px) {
   .create-order-container {
     padding: 15px;
@@ -254,11 +383,18 @@
     padding: 20px;
   }
 
+  /**
+   * Stack form action buttons vertically on mobile
+   */
   .form-actions {
     flex-direction: column;
   }
 
+  /**
+   * Full-width buttons for better mobile interaction
+   */
   .btn {
     width: 100%;
   }
 }
+

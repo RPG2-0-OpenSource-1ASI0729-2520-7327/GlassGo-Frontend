@@ -10,6 +10,10 @@ import { TooltipModule } from 'primeng/tooltip';
 
 export type SupportedLanguage = 'es' | 'en';
 
+/**
+ * Component for switching between supported languages in the application.
+ * Manages language persistence and translation loading.
+ */
 @Component({
   selector: 'app-language-switcher',
   standalone: true,
@@ -31,10 +35,16 @@ export class LanguageSwitcher implements OnInit, OnDestroy {
   protected currentLang: SupportedLanguage = 'es';
   private readonly STORAGE_KEY = 'glassgo-language';
 
+  /**
+   * Creates an instance of LanguageSwitcher.
+   */
   constructor() {
     this.initializeLanguage();
   }
 
+  /**
+   * Initializes the component and subscribes to language changes.
+   */
   ngOnInit(): void {
     // Subscribe to language changes
     this.translate.onLangChange
@@ -44,6 +54,9 @@ export class LanguageSwitcher implements OnInit, OnDestroy {
       });
   }
 
+  /**
+   * Cleans up subscriptions when the component is destroyed.
+   */
   ngOnDestroy(): void {
     this.destroy$.next();
     this.destroy$.complete();
