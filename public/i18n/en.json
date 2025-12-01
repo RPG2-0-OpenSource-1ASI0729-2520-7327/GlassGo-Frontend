@@ -49,10 +49,31 @@
       "tracking-number": "Tracking number"
     },
     "reports": {
-      "description": "View reports."
-    },
-    "calendar": {
-      "order-number": "Order number"
+      "analytics": "Analytics"
+    }
+  },
+  "service-planning": {
+    "title": "Create Order",
+    "manageOrderDetails": "Manage your order details below",
+    "deliveryInformation": "Delivery Information",
+    "deliveryDate": "Delivery Date",
+    "deliveryTime": "Delivery Time",
+    "deliveryAddress": "Delivery Address",
+    "deliveryAddressPlaceholder": "Enter complete delivery address",
+    "specialInstructions": "Special Instructions",
+    "specialInstructionsPlaceholder": "Additional delivery instructions (optional)",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "vat": "VAT",
+    "total": "Total",
+    "items": "Items",
+    "products": "products",
+    "cancel": "Cancel",
+    "submitOrder": "Submit Order",
+    "errors": {
+      "deliveryDateRequired": "Delivery date is required",
+      "deliveryTimeRequired": "Delivery time is required",
+      "deliveryAddressRequired": "Delivery address is required"
     }
   },
   "places": {
