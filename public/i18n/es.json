@@ -49,10 +49,31 @@
       "tracking-number": "Nº seguimiento"
     },
     "reports": {
-      "description": "Visualizar reportes."
-    },
-    "calendar": {
-      "order-number": "Orden número"
+      "analytics": "Analíticas"
+    }
+  },
+  "service-planning": {
+    "title": "Crear Pedido",
+    "manageOrderDetails": "Gestiona los detalles de tu pedido abajo",
+    "deliveryInformation": "Información de Entrega",
+    "deliveryDate": "Fecha de Entrega",
+    "deliveryTime": "Hora de Entrega",
+    "deliveryAddress": "Dirección de Entrega",
+    "deliveryAddressPlaceholder": "Ingrese la dirección completa de entrega",
+    "specialInstructions": "Instrucciones Especiales",
+    "specialInstructionsPlaceholder": "Instrucciones adicionales de entrega (opcional)",
+    "orderSummary": "Resumen del Pedido",
+    "subtotal": "Subtotal",
+    "vat": "IGV",
+    "total": "Total",
+    "items": "Artículos",
+    "products": "productos",
+    "cancel": "Cancelar",
+    "submitOrder": "Enviar Pedido",
+    "errors": {
+      "deliveryDateRequired": "La fecha de entrega es requerida",
+      "deliveryTimeRequired": "La hora de entrega es requerida",
+      "deliveryAddressRequired": "La dirección de entrega es requerida"
     }
   },
   "places": {

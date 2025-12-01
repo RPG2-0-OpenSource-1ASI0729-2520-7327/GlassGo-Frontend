@@ -3,13 +3,13 @@ This repository contains the **Frontend Open Source Application Development** of
 
 ---
 
-## 🧱 Stack
+##  Stack
 - **i18n** for internationalization (EN default, ES available)
-- **Chart.js** for dashb oard analytics
+- **Chart.js** for dashboard analytics
 
 ---
 
-## ⚙️ Project Structure
+##  Project Structure
 ```
 src/
  ├─ app/
@@ -32,7 +32,15 @@ src/
 
 ---
 
-## 🚀 Run Locally
+## Run Fake API (json-server)
+```bash
+cd server
+npx json-server --watch db.json --port 3000
+```
+
+---
+
+##  Run Locally
 ```bash
 npm install
 npm start
@@ -44,15 +52,7 @@ VITE_API_BASE_URL=http://localhost:3000
 ```
 ---
 
-## Run Fake API (json-server)
-```bash
-cd server
-npx json-server --watch db.json --port 3000
-```
-
----
-
-## 🌿 Branching Model
+##  Branching Model
 We use **GitFlow**:
 - `main` → stable production-ready releases
 - `develop` → integration branch
@@ -83,7 +83,7 @@ docs: add setup instructions and env examples in README
 
 ---
 
-## 🧪 Testing & Linting
+##  Testing & Linting
 ```bash
 npm run lint
 npm run test
@@ -91,13 +91,13 @@ npm run test
 
 ---
 
-## 🌍 Deployment
+##  Deployment
 - Dev environment: `localhost:5173`
 - Production: via GitHub Pages / Vercel / Netlify (depending on TF1 delivery)
 
 ---
 
-## 👥 Authors
+##  Authors
 Team **RPG Startup**
 - Jarod Jack Cespedes Pillco - u202318588
 - Guillermo Arturo Howard Robles – u202222275
