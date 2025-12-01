@@ -4,5 +4,9 @@ export const environment = {
   platformProviderApiBaseUrl: 'http://localhost:3000/api/v1',
   platformProviderCategoriesEndpointPath: '/categories',
   platformProviderCoursesEndpointPath: '/courses',
-  platformProviderPlacesEndpointPath: '/places'
+  platformProviderPlacesEndpointPath: '/places',
+  platformProviderPaymentGatewaysEndpointPath: '/payment-gateways',
+  platformProviderSubscriptionsEndpointPath: '/subscriptions',
+  platformProviderSubscriptionPlansEndpointPath: '/subscription-plans',
+  platformProviderTransactionsEndpointPath: '/transactions'
 };
