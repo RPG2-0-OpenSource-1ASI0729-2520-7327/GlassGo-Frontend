@@ -1,0 +1,59 @@
+<h1>Transactions History</h1>
+@if (store.loading()) {
+  <mat-spinner diameter="40"></mat-spinner>
+}
+@if (store.error()) {
+  <mat-error>{{ store.error() }}</mat-error>
+}
+<table mat-table [dataSource]="dataSource()" class="mat-elevation-z8" matSort matSortActive="id" matSortDirection="asc" matSortDisableClear>
+  <!-- ID Column -->
+  <ng-container matColumnDef="id">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+  </ng-container>
+
+  <!-- Subscription ID Column -->
+  <ng-container matColumnDef="subscriptionId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Subscription ID </th>
+    <td mat-cell *matCellDef="let element"> {{ element.subscriptionId }} </td>
+  </ng-container>
+
+  <!-- Amount Column -->
+  <ng-container matColumnDef="amount">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Amount </th>
+    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+  </ng-container>
+
+  <!-- Currency Column -->
+  <ng-container matColumnDef="currency">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Currency </th>
+    <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+  </ng-container>
+
+  <!-- Transaction Method Column -->
+  <ng-container matColumnDef="method">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Method </th>
+    <td mat-cell *matCellDef="let element"> {{element.paymentMethod}} </td>
+  </ng-container>
+
+  <!-- Transaction Date Column -->
+  <ng-container matColumnDef="date">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Paid At </th>
+    <td mat-cell *matCellDef="let element"> {{element.paymentDate}} </td>
+  </ng-container>
+
+  <!-- Status Column -->
+  <ng-container matColumnDef="status">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> Status </th>
+    <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+  </ng-container>
+
+  <!-- External Transaction Id Column -->
+  <ng-container matColumnDef="externalTransactionId">
+    <th mat-header-cell *matHeaderCellDef mat-sort-header> External Transaction ID </th>
+    <td mat-cell *matCellDef="let element"> {{element.externalTransactionId}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
