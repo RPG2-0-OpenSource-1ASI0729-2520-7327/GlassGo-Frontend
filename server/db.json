@@ -40,6 +40,515 @@
       }
     }
   ],
+  "tracking": [
+    {
+      "id": 1,
+      "trackingNumber": "6091228592056",
+      "status": "IN_TRANSIT",
+      "destination": "Miraflores",
+      "currentLocation": {
+        "lat": -12.1216,
+        "lng": -77.0282
+      },
+      "route": [
+        {
+          "coordinate": { "lat": -12.1100, "lng": -77.0500 },
+          "timestamp": "2025-01-24T08:00:00Z",
+          "description": "Centro de Distribución - Lima"
+        },
+        {
+          "coordinate": { "lat": -12.1150, "lng": -77.0400 },
+          "timestamp": "2025-01-24T09:30:00Z",
+          "description": "Av. Arequipa - San Isidro"
+        },
+        {
+          "coordinate": { "lat": -12.1216, "lng": -77.0282 },
+          "timestamp": "2025-01-24T11:00:00Z",
+          "description": "Miraflores - Ubicación actual"
+        }
+      ],
+      "totalDistance": 16,
+      "estimatedDeliveryTime": "2025-01-24T15:30:00Z",
+      "driverName": "Carlos Rodriguez",
+      "vehicleId": "VEH-001",
+      "notes": "El pedido está saliendo hacia miraflores",
+      "createdAt": "2025-01-24T07:00:00Z",
+      "updatedAt": "2025-01-24T11:00:00Z"
+    },
+    {
+      "id": 2,
+      "trackingNumber": "6091222839502",
+      "status": "IN_TRANSIT",
+      "destination": "Arequipa",
+      "currentLocation": {
+        "lat": -16.4090,
+        "lng": -71.5375
+      },
+      "route": [
+        {
+          "coordinate": { "lat": -12.1000, "lng": -77.0500 },
+          "timestamp": "2025-01-23T06:00:00Z",
+          "description": "Punto de origen - Lima"
+        },
+        {
+          "coordinate": { "lat": -14.0583, "lng": -75.7333 },
+          "timestamp": "2025-01-23T18:00:00Z",
+          "description": "Parada intermedia - Ica"
+        },
+        {
+          "coordinate": { "lat": -16.4090, "lng": -71.5375 },
+          "timestamp": "2025-01-24T10:00:00Z",
+          "description": "Ubicación actual - Arequipa"
+        }
+      ],
+      "totalDistance": 1020,
+      "estimatedDeliveryTime": "2025-01-24T16:00:00Z",
+      "driverName": "Miguel Santos",
+      "vehicleId": "VEH-005",
+      "notes": "El pedido está saliendo hacia Arequipa",
+      "createdAt": "2025-01-23T05:30:00Z",
+      "updatedAt": "2025-01-24T10:00:00Z"
+    },
+    {
+      "id": 3,
+      "trackingNumber": "6091228512345",
+      "status": "IN_TRANSIT",
+      "destination": "Chiclayo",
+      "currentLocation": {
+        "lat": -6.7714,
+        "lng": -79.8374
+      },
+      "route": [
+        {
+          "coordinate": { "lat": -12.1000, "lng": -77.0500 },
+          "timestamp": "2025-01-24T05:00:00Z",
+          "description": "Punto de origen - Lima"
+        },
+        {
+          "coordinate": { "lat": -8.1116, "lng": -79.0287 },
+          "timestamp": "2025-01-24T12:00:00Z",
+          "description": "Parada intermedia - Trujillo"
+        },
+        {
+          "coordinate": { "lat": -6.7714, "lng": -79.8374 },
+          "timestamp": "2025-01-24T14:30:00Z",
+          "description": "Ubicación actual - Chiclayo"
+        }
+      ],
+      "totalDistance": 770,
+      "estimatedDeliveryTime": "2025-01-24T18:00:00Z",
+      "driverName": "Ana Flores",
+      "vehicleId": "VEH-003",
+      "notes": "El pedido está saliendo hacia Chiclayo",
+      "createdAt": "2025-01-24T04:30:00Z",
+      "updatedAt": "2025-01-24T14:30:00Z"
+    },
+    {
+      "id": 4,
+      "trackingNumber": "6091223452986",
+      "status": "IN_TRANSIT",
+      "destination": "San Borja",
+      "currentLocation": {
+        "lat": -12.0950,
+        "lng": -76.9980
+      },
+      "route": [
+        {
+          "coordinate": { "lat": -12.1100, "lng": -77.0500 },
+          "timestamp": "2025-01-24T13:00:00Z",
+          "description": "Centro de Distribución - Lima"
+        },
+        {
+          "coordinate": { "lat": -12.1050, "lng": -77.0250 },
+          "timestamp": "2025-01-24T13:30:00Z",
+          "description": "Av. Javier Prado"
+        },
+        {
+          "coordinate": { "lat": -12.0950, "lng": -76.9980 },
+          "timestamp": "2025-01-24T14:00:00Z",
+          "description": "San Borja - Ubicación actual"
+        }
+      ],
+      "totalDistance": 8,
+      "estimatedDeliveryTime": "2025-01-24T15:00:00Z",
+      "driverName": "Pedro Ramirez",
+      "vehicleId": "VEH-007",
+      "notes": "El pedido está saliendo hacia San borja",
+      "createdAt": "2025-01-24T12:30:00Z",
+      "updatedAt": "2025-01-24T14:00:00Z"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Whiskey Johnnie Walker Red Label",
+      "description": "Whiskey escocés mezclado de alta calidad, 750ml",
+      "price": 89.50,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Whiskey",
+      "stockQuantity": 45,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "name": "Ron Bacardi Carta Blanca",
+      "description": "Ron blanco premium de Puerto Rico, 750ml",
+      "price": 65.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Ron",
+      "stockQuantity": 32,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Vodka Absolut Original",
+      "description": "Vodka sueco premium destilado, 750ml",
+      "price": 75.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Vodka",
+      "stockQuantity": 28,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 4,
+      "name": "Pisco Quebranta Tres Generaciones",
+      "description": "Pisco peruano artesanal de uva quebranta, 500ml",
+      "price": 95.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Pisco",
+      "stockQuantity": 20,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 5,
+      "name": "Gin Bombay Sapphire",
+      "description": "Gin inglés premium con botanicos exóticos, 750ml",
+      "price": 98.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Gin",
+      "stockQuantity": 15,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 6,
+      "name": "Cerveza Pilsen Callao",
+      "description": "Cerveza lager peruana clásica, pack de 6 botellas 630ml",
+      "price": 25.50,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Cerveza",
+      "stockQuantity": 80,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 7,
+      "name": "Tequila José Cuervo Especial",
+      "description": "Tequila mexicano gold premium, 750ml",
+      "price": 85.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Tequila",
+      "stockQuantity": 18,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 8,
+      "name": "Vino Tinto Tacama Reserva",
+      "description": "Vino tinto peruano de uva cabernet sauvignon, 750ml",
+      "price": 45.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Vino",
+      "stockQuantity": 35,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 9,
+      "name": "Brandy Torres 10 Años",
+      "description": "Brandy español envejecido 10 años, 700ml",
+      "price": 120.00,
+      "currency": "S/.",
+      "isAvailable": false,
+      "category": "Brandy",
+      "stockQuantity": 0,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    },
+    {
+      "id": 10,
+      "name": "Licor de Café Kahlúa",
+      "description": "Licor mexicano de café premium, 750ml",
+      "price": 78.00,
+      "currency": "S/.",
+      "isAvailable": true,
+      "category": "Licor",
+      "stockQuantity": 22,
+      "createdAt": "2025-01-01T00:00:00Z",
+      "updatedAt": "2025-12-02T10:30:00Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "orderNumber": "ORD-LIC-001",
+      "status": "pending",
+      "items": [
+        {
+          "id": 1,
+          "productId": 1,
+          "productName": "Whiskey Johnnie Walker Red Label",
+          "quantity": 2,
+          "unitPrice": 89.50,
+          "totalPrice": 179.00,
+          "createdAt": "2025-12-02T09:00:00Z",
+          "updatedAt": "2025-12-02T09:00:00Z"
+        },
+        {
+          "id": 2,
+          "productId": 6,
+          "productName": "Cerveza Pilsen Callao",
+          "quantity": 3,
+          "unitPrice": 25.50,
+          "totalPrice": 76.50,
+          "createdAt": "2025-12-02T09:00:00Z",
+          "updatedAt": "2025-12-02T09:00:00Z"
+        }
+      ],
+      "deliveryInformation": {
+        "id": 1,
+        "deliveryDate": "2025-12-05",
+        "deliveryTime": "14:30",
+        "deliveryAddress": "Av. Javier Prado 456, San Isidro, Lima",
+        "specialInstructions": "Entregar por puerta trasera del establecimiento",
+        "createdAt": "2025-12-02T09:00:00Z",
+        "updatedAt": "2025-12-02T09:00:00Z"
+      },
+      "subtotal": 255.50,
+      "vatRate": 0.18,
+      "vatAmount": 45.99,
+      "total": 301.49,
+      "createdAt": "2025-12-02T09:00:00Z",
+      "updatedAt": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "orderNumber": "ORD-LIC-002",
+      "status": "confirmed",
+      "items": [
+        {
+          "id": 3,
+          "productId": 4,
+          "productName": "Pisco Quebranta Tres Generaciones",
+          "quantity": 1,
+          "unitPrice": 95.00,
+          "totalPrice": 95.00,
+          "createdAt": "2025-12-01T15:30:00Z",
+          "updatedAt": "2025-12-01T15:30:00Z"
+        },
+        {
+          "id": 4,
+          "productId": 8,
+          "productName": "Vino Tinto Tacama Reserva",
+          "quantity": 2,
+          "unitPrice": 45.00,
+          "totalPrice": 90.00,
+          "createdAt": "2025-12-01T15:30:00Z",
+          "updatedAt": "2025-12-01T15:30:00Z"
+        }
+      ],
+      "deliveryInformation": {
+        "id": 2,
+        "deliveryDate": "2025-12-03",
+        "deliveryTime": "16:00",
+        "deliveryAddress": "Calle Berlín 678, Miraflores, Lima",
+        "specialInstructions": "Contactar 30 min antes de la entrega",
+        "createdAt": "2025-12-01T15:30:00Z",
+        "updatedAt": "2025-12-01T15:30:00Z"
+      },
+      "subtotal": 185.00,
+      "vatRate": 0.18,
+      "vatAmount": 33.30,
+      "total": 218.30,
+      "createdAt": "2025-12-01T15:30:00Z",
+      "updatedAt": "2025-12-01T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "orderNumber": "ORD-LIC-003",
+      "status": "shipped",
+      "items": [
+        {
+          "id": 5,
+          "productId": 3,
+          "productName": "Vodka Absolut Original",
+          "quantity": 1,
+          "unitPrice": 75.00,
+          "totalPrice": 75.00,
+          "createdAt": "2025-11-30T10:15:00Z",
+          "updatedAt": "2025-11-30T10:15:00Z"
+        },
+        {
+          "id": 6,
+          "productId": 5,
+          "productName": "Gin Bombay Sapphire",
+          "quantity": 1,
+          "unitPrice": 98.00,
+          "totalPrice": 98.00,
+          "createdAt": "2025-11-30T10:15:00Z",
+          "updatedAt": "2025-11-30T10:15:00Z"
+        },
+        {
+          "id": 7,
+          "productId": 10,
+          "productName": "Licor de Café Kahlúa",
+          "quantity": 2,
+          "unitPrice": 78.00,
+          "totalPrice": 156.00,
+          "createdAt": "2025-11-30T10:15:00Z",
+          "updatedAt": "2025-11-30T10:15:00Z"
+        }
+      ],
+      "deliveryInformation": {
+        "id": 3,
+        "deliveryDate": "2025-12-02",
+        "deliveryTime": "11:00",
+        "deliveryAddress": "Av. La Marina 1050, Lima",
+        "specialInstructions": "Horario de oficina únicamente",
+        "createdAt": "2025-11-30T10:15:00Z",
+        "updatedAt": "2025-11-30T10:15:00Z"
+      },
+      "subtotal": 329.00,
+      "vatRate": 0.18,
+      "vatAmount": 59.22,
+      "total": 388.22,
+      "createdAt": "2025-11-30T10:15:00Z",
+      "updatedAt": "2025-11-30T10:15:00Z"
+    }
+  ],
+  "orderItems": [
+    {
+      "id": 1,
+      "productId": 1,
+      "productName": "Whiskey Johnnie Walker Red Label",
+      "quantity": 2,
+      "unitPrice": 89.50,
+      "totalPrice": 179.00,
+      "orderId": 1,
+      "createdAt": "2025-12-02T09:00:00Z",
+      "updatedAt": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "productId": 6,
+      "productName": "Cerveza Pilsen Callao",
+      "quantity": 3,
+      "unitPrice": 25.50,
+      "totalPrice": 76.50,
+      "orderId": 1,
+      "createdAt": "2025-12-02T09:00:00Z",
+      "updatedAt": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": 3,
+      "productId": 4,
+      "productName": "Pisco Quebranta Tres Generaciones",
+      "quantity": 1,
+      "unitPrice": 95.00,
+      "totalPrice": 95.00,
+      "orderId": 2,
+      "createdAt": "2025-12-01T15:30:00Z",
+      "updatedAt": "2025-12-01T15:30:00Z"
+    },
+    {
+      "id": 4,
+      "productId": 8,
+      "productName": "Vino Tinto Tacama Reserva",
+      "quantity": 2,
+      "unitPrice": 45.00,
+      "totalPrice": 90.00,
+      "orderId": 2,
+      "createdAt": "2025-12-01T15:30:00Z",
+      "updatedAt": "2025-12-01T15:30:00Z"
+    },
+    {
+      "id": 5,
+      "productId": 3,
+      "productName": "Vodka Absolut Original",
+      "quantity": 1,
+      "unitPrice": 75.00,
+      "totalPrice": 75.00,
+      "orderId": 3,
+      "createdAt": "2025-11-30T10:15:00Z",
+      "updatedAt": "2025-11-30T10:15:00Z"
+    },
+    {
+      "id": 6,
+      "productId": 5,
+      "productName": "Gin Bombay Sapphire",
+      "quantity": 1,
+      "unitPrice": 98.00,
+      "totalPrice": 98.00,
+      "orderId": 3,
+      "createdAt": "2025-11-30T10:15:00Z",
+      "updatedAt": "2025-11-30T10:15:00Z"
+    },
+    {
+      "id": 7,
+      "productId": 10,
+      "productName": "Licor de Café Kahlúa",
+      "quantity": 2,
+      "unitPrice": 78.00,
+      "totalPrice": 156.00,
+      "orderId": 3,
+      "createdAt": "2025-11-30T10:15:00Z",
+      "updatedAt": "2025-11-30T10:15:00Z"
+    }
+  ],
+  "deliveryInformation": [
+    {
+      "id": 1,
+      "deliveryDate": "2025-12-05",
+      "deliveryTime": "14:30",
+      "deliveryAddress": "Av. Javier Prado 456, San Isidro, Lima",
+      "specialInstructions": "Entregar por puerta trasera del establecimiento",
+      "orderId": 1,
+      "createdAt": "2025-12-02T09:00:00Z",
+      "updatedAt": "2025-12-02T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "deliveryDate": "2025-12-03",
+      "deliveryTime": "16:00",
+      "deliveryAddress": "Calle Berlín 678, Miraflores, Lima",
+      "specialInstructions": "Contactar 30 min antes de la entrega",
+      "orderId": 2,
+      "createdAt": "2025-12-01T15:30:00Z",
+      "updatedAt": "2025-12-01T15:30:00Z"
+    },
+    {
+      "id": 3,
+      "deliveryDate": "2025-12-02",
+      "deliveryTime": "11:00",
+      "deliveryAddress": "Av. La Marina 1050, Lima",
+      "specialInstructions": "Horario de oficina únicamente",
+      "orderId": 3,
+      "createdAt": "2025-11-30T10:15:00Z",
+      "updatedAt": "2025-11-30T10:15:00Z"
+    }
+  ],
   "clientes": [
     {
       "id": 1,
