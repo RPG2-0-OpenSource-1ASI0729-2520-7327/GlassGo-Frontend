@@ -8,7 +8,7 @@ This repository contains the **Frontend Open Source Application Development** of
 - **Leaflet** for interactive maps and route visualization  
 - **i18n** for internationalization (EN default, ES available)
 - **Chart.js** for dashboard analytics
-- **JSON Server** for development API simulation
+- **JSON Server** for development API simulation (including payments API)
 
 ---
 
@@ -18,6 +18,7 @@ src/app/
  ├─ shared/                    # Common utilities and components
  ├─ analytics/                 # Dashboard & Analytics BC
  ├─ planning/                  # Service Planning BC  
+ ├─ payments/                  # Payments & Subscriptions BC
  └─ Execution/                 # Service Execution BC
     ├─ domain/
     │  └─ model/
@@ -68,19 +69,26 @@ npm start
 - Search functionality by tracking number
 - Detailed shipment information display
 
-### 📊 **Analytics Dashboard** 
+###  **Payment System**
+- Multiple subscription plans (Basic, Professional, Enterprise)
+- Various payment gateways (Stripe, PayPal, Yape, Plin)
+- Transaction history and management
+- Automated billing and renewals
+- Payment method management
+
+###  **Analytics Dashboard** 
 - Performance metrics and KPIs
 - Chart.js visualizations
 - Real-time data updates
 
-### 📦 **Order Planning**
+###  **Order Planning**
 - Create and manage delivery orders
 - Product catalog management
 - Delivery information tracking
 
 ---
 
-## 🧩 Commit Convention
+##  Commit Convention
 Follow [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/):
 - `feat:` → new feature or component
 - `fix:` → bug fix  
@@ -149,7 +157,7 @@ npm run build
 
 ---
 
-## 👥 Authors
+##  Authors
 Team **RPG Startup**
 - Jarod Jack Cespedes Pillco - u202318588
 - Guillermo Arturo Howard Robles – u202222275  
