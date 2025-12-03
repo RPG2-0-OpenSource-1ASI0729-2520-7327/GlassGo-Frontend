@@ -1,0 +1,223 @@
+{
+  "option": {
+    "home": "Home",
+    "about": "About",
+    "categories": "Categories",
+    "courses": "Courses",
+    "places": "Places"
+  },
+  "navigation": {
+    "create-order": "Create Order",
+    "tracking": "Tracking",
+    "inventory": "Inventory",
+    "calendar": "Calendar",
+    "reports": "Reports",
+    "history": "History",
+    "claims": "Claims",
+    "administration": "Administration",
+    "logout": "Logout"
+  },
+  "about": {
+    "title": "About Us",
+    "content": "Learning Center-7327 is an Education Business Platform, part of Logo Corporation."
+  },
+  "home": {
+    "title": "Welcome",
+    "content": "Welcome to Learning Center-7327.",
+    "welcome-greeting": "Hello, {{userName}}",
+    "welcome-description": "Here's your operations summary for today.",
+    "stats": {
+      "active-orders": "Active Orders",
+      "stock-available": "Stock Available",
+      "estimated-time": "Estimated Time",
+      "avoided-orders": "Avoided Orders"
+    },
+    "sections": {
+      "tracking-orders": "Tracking & Recent Orders",
+      "inventory": "Inventory",
+      "reports": "Reports",
+      "calendar": "Calendar"
+    },
+    "actions": {
+      "see-more": "See more"
+    },
+    "tracking": {
+      "tracking-number": "Tracking number"
+    },
+    "inventory": {
+      "status": "Status",
+      "tracking-number": "Tracking number"
+    },
+    "reports": {
+      "analytics": "Analytics"
+    }
+  },
+  "planning": {
+    "title": "Create Order",
+    "manageOrderDetails": "Manage your order details below",
+    "orderInformation": "Order Information",
+    "searchProducts": "Search for products...",
+    "addNewProduct": "Add new product",
+    "product": "Product",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "removeItem": "Remove item",
+    "noProductsAdded": "No products added to order",
+    "availableProducts": "Available Products",
+    "stock": "Stock",
+    "addToOrder": "Add to Order",
+    "deliveryInformation": "Delivery Information",
+    "deliveryDate": "Delivery Date",
+    "deliveryTime": "Delivery Time",
+    "deliveryAddress": "Delivery Address",
+    "deliveryAddressPlaceholder": "Enter complete delivery address",
+    "specialInstructions": "Special Instructions",
+    "specialInstructionsPlaceholder": "Additional delivery instructions (optional)",
+    "orderSummary": "Order Summary",
+    "subtotal": "Subtotal",
+    "vat": "VAT",
+    "items": "Items",
+    "products": "products",
+    "cancel": "Cancel",
+    "submitOrder": "Submit Order",
+    "errors": {
+      "deliveryDateRequired": "Delivery date is required",
+      "deliveryTimeRequired": "Delivery time is required",
+      "deliveryAddressRequired": "Delivery address is required"
+    }
+  },
+  "places": {
+    "list-title": "Places",
+    "id": "ID",
+    "name": "Name",
+    "address": "Address",
+    "new": "New Place",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path <strong>{{ invalid_path }}</strong> is not valid.",
+    "go-home": "Go Home"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "powered-by": "Powered by",
+    "and": "and"
+  },
+  "categories": {
+    "list-title": "Categories",
+    "id": "ID",
+    "name": "Name",
+    "actions": "Actions",
+    "new": "New Category",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "category": {
+    "new-title": "Create New Category",
+    "edit-title": "Edit Category",
+    "name": "Name",
+    "create": "Create Category",
+    "update": "Update Category",
+    "cancel": "Cancel",
+    "success-create": "Category created successfully",
+    "success-update": "Category updated successfully",
+    "success-delete": "Category deleted successfully",
+    "error": {
+      "name-required": "Name is required"
+    }
+  },
+  "analytics": {
+    "report": {
+      "title": "Report",
+      "description": "Analyze performance, costs, and efficiency in easy-to-understand reports.",
+      "loading": "Loading data...",
+      "error": "Error loading data",
+      "no-data": "No data available",
+      "last-updated": "Last updated",
+      "refresh": "Refresh",
+      "export": "Export",
+      "filter": "Filter",
+      "clear-filter": "Clear filters"
+    },
+    "metrics": {
+      "not-interested": "They are not interested",
+      "connection-lost": "Connection lost",
+      "buttons-clicked": "Number of buttons clicked",
+      "new-visits": "New visits",
+      "new-followers": "New followers",
+      "posts-clicked": "Number of posts clicked",
+      "see-art-connection": "See art connection",
+      "see-pos-connection": "See pos connection",
+      "see-clicked-buttons": "See clicked buttons",
+      "share-article": "Share article",
+      "share-connection": "Share connection with...",
+      "see-clicked-posts": "See clicked posts"
+    },
+    "chart": {
+      "title": "Popular Liquors by Zones",
+      "july-population": "July Population",
+      "august-population": "August Population",
+      "total-population": "Total Population",
+      "zones": {
+        "title": "Liquor Types",
+        "smirnuff": "Smirnuff",
+        "juger": "Juger",
+        "pisco": "Pisco",
+        "cerveza": "Beer",
+        "vodka": "Vodka"
+      }
+    },
+    "kpi": {
+      "cards-title": "Key Metrics",
+      "trend-up": "Upward trend",
+      "trend-down": "Downward trend",
+      "trend-stable": "Stable",
+      "trend-neutral": "Neutral",
+      "test-message": "If you can see this, the component is loading correctly."
+    },
+    "filter": {
+      "date-range": "Date range",
+      "start-date": "Start date",
+      "end-date": "End date",
+      "report-type": "Report type",
+      "zone": "Zone",
+      "status": "Status",
+      "apply": "Apply",
+      "clear": "Clear"
+    }
+  },
+  "coming-soon": {
+    "title": "🚧 Coming Soon",
+    "description": "We are working on this section.",
+    "message": "This functionality will be available soon."
+  },
+  "courses": {
+    "list-title": "Courses",
+    "id": "ID",
+    "title": "Title",
+    "description": "Description",
+    "category": "Category",
+    "actions": "Actions",
+    "new": "New Course",
+    "edit": "Edit",
+    "delete": "Delete"
+  },
+  "course": {
+    "new-title": "Create New Course",
+    "edit-title": "Edit Course",
+    "title": "Title",
+    "description": "Description",
+    "category": "Category",
+    "create": "Create Course",
+    "update": "Update Course",
+    "cancel": "Cancel",
+    "error": {
+      "title-required": "Title is required",
+      "description-required": "Description is required",
+      "category-required": "Category is required"
+    }
+  }
+}

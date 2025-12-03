@@ -1,0 +1,144 @@
+<div class="tracking-container">
+  <!-- Sidebar -->
+  <div class="tracking-sidebar">
+    <!-- Header -->
+    <div class="sidebar-header">
+      <h1 class="sidebar-title">Tracking</h1>
+      <p class="sidebar-subtitle">
+        Track your trucks' routes with complete traceability and transparency.
+      </p>
+    </div>
+
+    <!-- Search Section -->
+    <div class="search-section">
+      <div class="search-input-container">
+        <i class="search-icon">🔍</i>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Enter the order tracking number"
+          [(ngModel)]="searchQuery"
+          (keyup.enter)="searchTracking()"
+        />
+      </div>
+      <button
+        class="search-button"
+        [disabled]="loading()"
+        (click)="searchTracking()"
+      >
+        @if (loading()) {
+          Buscando...
+        } @else {
+          Buscar
+        }
+      </button>
+    </div>
+
+    <!-- Error Message -->
+    @if (error()) {
+      <div class="error-container">
+        <p class="error-message">{{ error() }}</p>
+      </div>
+    }
+
+    <!-- Status Section -->
+    <div class="status-section">
+      <div class="status-header">
+        <span>📦</span>
+        <span>In transit</span>
+      </div>
+
+      @if (loading()) {
+        <div class="loading-container">
+          <div class="loading-spinner"></div>
+          <span>Cargando seguimientos...</span>
+        </div>
+      } @else if (inTransitTrackings().length > 0) {
+        <ul class="tracking-list">
+          @for (tracking of inTransitTrackings(); track tracking.id) {
+            <li
+              class="tracking-item"
+              [class.selected]="selectedTracking()?.id === tracking.id"
+              (click)="selectTracking(tracking)"
+            >
+              <div class="tracking-number">
+                {{ tracking.trackingNumber }}
+              </div>
+              <div class="tracking-destination">
+                {{ tracking.destination }}
+              </div>
+              <div class="tracking-status" [class]="'status-' + tracking.status.toLowerCase().replace('_', '-')">
+                {{ getStatusText(tracking.status) }}
+              </div>
+            </li>
+          }
+        </ul>
+      } @else {
+        <div class="empty-state">
+          <h3>No hay seguimientos en tránsito</h3>
+          <p>Utiliza el buscador para encontrar un seguimiento específico.</p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <!-- Map Container -->
+  <div class="map-container">
+    @if (!selectedTracking()) {
+      <div class="map-placeholder">
+        <h3>Selecciona un seguimiento</h3>
+        <p>Elige un seguimiento de la lista o busca uno específico para ver su ubicación en el mapa.</p>
+      </div>
+    } @else {
+      <!-- Interactive Map Component -->
+      <app-tracking-map
+        [tracking]="selectedTracking()!"
+        [height]="600"
+        style="width: 100%; height: 100%;"
+      ></app-tracking-map>
+
+      <!-- Tracking Details Card -->
+      <div class="tracking-details">
+        <div class="details-header">
+          <div class="details-tracking-number">
+            Tracking Number: {{ selectedTracking()!.trackingNumber }}
+          </div>
+          <div class="details-destination">
+            {{ selectedTracking()!.destination }}
+          </div>
+        </div>
+
+        <div class="details-status">
+          <div class="status-indicator"></div>
+          <span>{{ getStatusText(selectedTracking()!.status) }}</span>
+        </div>
+
+        <div class="details-info">
+          <div class="info-row">
+            <span class="info-label">Route:</span>
+            <span class="info-value route-distance">{{ selectedTracking()!.totalDistance }} km</span>
+          </div>
+
+          @if (selectedTracking()!.driverName) {
+            <div class="info-row">
+              <span class="info-label">Driver:</span>
+              <span class="info-value">{{ selectedTracking()!.driverName }}</span>
+            </div>
+          }
+
+          @if (selectedTracking()!.vehicleId) {
+            <div class="info-row">
+              <span class="info-label">Vehicle:</span>
+              <span class="info-value">{{ selectedTracking()!.vehicleId }}</span>
+            </div>
+          }
+
+          <div class="info-row">
+            <span class="info-label">ETA:</span>
+            <span class="info-value">{{ formatDate(selectedTracking()!.estimatedDeliveryTime) }}</span>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

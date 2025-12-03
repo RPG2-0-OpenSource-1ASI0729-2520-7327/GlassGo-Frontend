@@ -1,0 +1,81 @@
+.home-container {
+  padding: 20px;
+  font-family: "Inter", sans-serif;
+}
+
+.welcome-header {
+  margin-bottom: 20px;
+}
+
+.welcome-header h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.welcome-header p {
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Estadísticas */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  text-align: center;
+}
+
+.card h3 {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Contenido dividido */
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.content-box {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1e2b3b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.content-header a {
+  color: #00d2b3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.track-id {
+  color: #00b894;
+  font-weight: 600;
+}

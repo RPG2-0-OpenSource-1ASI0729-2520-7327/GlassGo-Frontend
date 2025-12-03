@@ -1,0 +1,224 @@
+{
+  "option": {
+    "home": "Inicio",
+    "about": "Acerca de",
+    "categories": "Categorías",
+    "courses": "Cursos",
+    "places": "Lugares"
+  },
+  "navigation": {
+    "create-order": "Crear Pedido",
+    "tracking": "Tracking",
+    "inventory": "Inventario",
+    "calendar": "Calendario",
+    "reports": "Reportes",
+    "history": "Historial",
+    "claims": "Reclamos",
+    "administration": "Administración",
+    "logout": "Cerrar sesión"
+  },
+  "about": {
+    "title": "Acerca de Nosotros",
+    "content": "Learning Center-7327 es una Plataforma educativa empresarial, parte de Logo Corporation."
+  },
+  "home": {
+    "title": "Bienvenido",
+    "content": "Bienvenido a Learning Center-7327.",
+    "welcome-greeting": "Hola, {{userName}}",
+    "welcome-description": "Aquí tienes el resumen de tus operaciones de hoy.",
+    "stats": {
+      "active-orders": "Pedidos activos",
+      "stock-available": "Stock disponible",
+      "estimated-time": "Tiempo estimado",
+      "avoided-orders": "Pedidos evitados"
+    },
+    "sections": {
+      "tracking-orders": "Tracking y Pedidos recientes",
+      "inventory": "Inventario",
+      "reports": "Reportes",
+      "calendar": "Calendario"
+    },
+    "actions": {
+      "see-more": "Ver más"
+    },
+    "tracking": {
+      "tracking-number": "Número de seguimiento"
+    },
+    "inventory": {
+      "status": "Estado",
+      "tracking-number": "Nº seguimiento"
+    },
+    "reports": {
+      "analytics": "Analíticas"
+    }
+  },
+  "planning": {
+    "title": "Crear Pedido",
+    "manageOrderDetails": "Gestiona los detalles de tu pedido abajo",
+    "orderInformation": "Información del Pedido",
+    "searchProducts": "Buscar productos...",
+    "addNewProduct": "Agregar nuevo producto",
+    "product": "Producto",
+    "quantity": "Cantidad",
+    "price": "Precio",
+    "total": "Total",
+    "removeItem": "Eliminar artículo",
+    "noProductsAdded": "No se han agregado productos al pedido",
+    "availableProducts": "Productos Disponibles",
+    "stock": "Stock",
+    "addToOrder": "Agregar al Pedido",
+    "deliveryInformation": "Información de Entrega",
+    "deliveryDate": "Fecha de Entrega",
+    "deliveryTime": "Hora de Entrega",
+    "deliveryAddress": "Dirección de Entrega",
+    "deliveryAddressPlaceholder": "Ingrese la dirección completa de entrega",
+    "specialInstructions": "Instrucciones Especiales",
+    "specialInstructionsPlaceholder": "Instrucciones adicionales de entrega (opcional)",
+    "orderSummary": "Resumen del Pedido",
+    "subtotal": "Subtotal",
+    "vat": "IGV",
+    "items": "Artículos",
+    "products": "productos",
+    "cancel": "Cancelar",
+    "submitOrder": "Enviar Pedido",
+    "errors": {
+      "deliveryDateRequired": "La fecha de entrega es requerida",
+      "deliveryTimeRequired": "La hora de entrega es requerida",
+      "deliveryAddressRequired": "La dirección de entrega es requerida"
+    }
+  },
+  "places": {
+    "list-title": "Lugares",
+    "id": "ID",
+    "name": "Nombre",
+    "address": "Dirección",
+    "new": "Nuevo Lugar",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "page-not-found": {
+    "title": "Página No Encontrada",
+    "content": "La ruta <strong>{{ invalid_path }}</strong> es inválida.",
+    "go-home": "Ir a Inicio"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados.",
+    "powered-by": "Desarrollado con",
+    "and": "y"
+  },
+  "categories": {
+    "list-title": "Categorías",
+    "id": "ID",
+    "name": "Nombre",
+    "actions": "Acciones",
+    "new": "Nueva Categoría",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "category": {
+    "new-title": "Crear Nueva Categoría",
+    "edit-title": "Editar Categoría",
+    "name": "Nombre",
+    "create": "Crear Categoría",
+    "update": "Actualizar Categoría",
+    "cancel": "Cancelar",
+    "success-create": "Categoría creada exitosamente",
+    "success-update": "Categoría actualizada exitosamente",
+    "success-delete": "Categoría eliminada exitosamente",
+    "error": {
+      "name-required": "El nombre es obligatorio"
+    }
+  },
+  "analytics": {
+    "report": {
+      "title": "Reporte",
+      "description": "Analiza rendimiento, costos y eficiencia en reportes fáciles de entender.",
+      "loading": "Cargando datos...",
+      "error": "Error al cargar los datos",
+      "no-data": "No hay datos disponibles",
+      "last-updated": "Última actualización",
+      "refresh": "Actualizar",
+      "export": "Exportar",
+      "filter": "Filtrar",
+      "clear-filter": "Limpiar filtros"
+    },
+    "metrics": {
+      "not-interested": "No están interesados",
+      "connection-lost": "Conexión perdida",
+      "buttons-clicked": "Número de botones clickeados",
+      "new-visits": "Nuevas visitas",
+      "new-followers": "Nuevos seguidores",
+      "posts-clicked": "Número de posts clickeados",
+      "see-art-connection": "Ver conexión de arte",
+      "see-pos-connection": "Ver conexión de pos",
+      "see-clicked-buttons": "Ver botones clickeados",
+      "share-article": "Compartir artículo",
+      "share-connection": "Compartir conexión con...",
+      "see-clicked-posts": "Ver posts clickeados"
+    },
+    "chart": {
+      "title": "Licores Populares por Zonas",
+      "july-population": "Población Julio",
+      "august-population": "Población Agosto",
+      "total-population": "Población Total",
+      "zones": {
+        "title": "Tipos de Licores",
+        "smirnuff": "Smirnuff",
+        "juger": "Juger",
+        "pisco": "Pisco",
+        "cerveza": "Cerveza",
+        "vodka": "Vodka"
+      }
+    },
+    "kpi": {
+      "cards-title": "Métricas Principales",
+      "trend-up": "Tendencia al alza",
+      "trend-down": "Tendencia a la baja",
+      "trend-stable": "Estable",
+      "trend-neutral": "Neutral",
+      "test-message": "Si puedes ver esto, el componente está cargando correctamente."
+    },
+    "filter": {
+      "date-range": "Rango de fechas",
+      "start-date": "Fecha inicio",
+      "end-date": "Fecha fin",
+      "report-type": "Tipo de reporte",
+      "zone": "Zona",
+      "status": "Estado",
+      "apply": "Aplicar",
+      "clear": "Limpiar"
+    }
+  },
+  "coming-soon": {
+    "title": "🚧 Próximamente",
+    "description": "Estamos trabajando en esta sección.",
+    "message": "Esta funcionalidad estará disponible pronto."
+  },
+  "courses": {
+    "list-title": "Cursos",
+    "id": "ID",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "actions": "Acciones",
+    "new": "Nuevo Curso",
+    "edit": "Editar",
+    "delete": "Eliminar"
+  },
+  "course": {
+    "new-title": "Crear Nuevo Curso",
+    "edit-title": "Editar Curso",
+    "title": "Título",
+    "description": "Descripción",
+    "category": "Categoría",
+    "create": "Crear Curso",
+    "update": "Actualizar Curso",
+    "cancel": "Cancelar",
+    "error": {
+      "title-required": "El título es obligatorio",
+      "description-required": "La descripción es obligatoria",
+      "category-required": "La categoría es obligatoria"
+    }
+  }
+}
+

@@ -1,0 +1,25 @@
+<div class="language-switcher">
+
+  <!-- Toggle Switch Design -->
+  <div class="language-switch"
+       [pTooltip]="getTooltipText()"
+       tooltipPosition="bottom"
+       (click)="toggleLanguage()"
+       [attr.aria-label]="getTooltipText()">
+
+    <!-- Switch Container -->
+    <div class="switch-container" [class.active]="currentLang === 'en'">
+
+      <!-- Language Labels -->
+      <span class="language-label left" [class.active]="currentLang === 'es'">ES</span>
+      <span class="language-label right" [class.active]="currentLang === 'en'">EN</span>
+
+      <!-- Switch Slider -->
+      <div class="switch-slider" [class.right]="currentLang === 'en'"></div>
+
+    </div>
+
+  </div>
+
+</div>
+

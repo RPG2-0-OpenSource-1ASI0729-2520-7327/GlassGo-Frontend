@@ -1,0 +1,80 @@
+<div class="home-container">
+  <!-- Header de bienvenida -->
+  <div class="welcome-header">
+    <h1>{{ 'home.welcome-greeting' | translate:{ userName: userName } }} 👋</h1>
+    <p>{{ 'home.welcome-description' | translate }}</p>
+  </div>
+
+  <!-- Estadísticas principales -->
+  <div class="stats">
+    <div class="card">
+      <h3>{{ 'home.stats.active-orders' | translate }}</h3>
+      <p>{{ stats.activeOrders }}</p>
+    </div>
+    <div class="card">
+      <h3>{{ 'home.stats.stock-available' | translate }}</h3>
+      <p>{{ stats.stockAvailable }}</p>
+    </div>
+    <div class="card">
+      <h3>{{ 'home.stats.estimated-time' | translate }}</h3>
+      <p>{{ stats.estimatedTime }}</p>
+    </div>
+    <div class="card">
+      <h3>{{ 'home.stats.avoided-orders' | translate }}</h3>
+      <p>{{ stats.avoidedOrders }}</p>
+    </div>
+  </div>
+
+  <!-- Contenido dividido -->
+  <div class="content-grid">
+    <!-- Tracking -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>{{ 'home.sections.tracking-orders' | translate }}</h2>
+        <a href="#">{{ 'home.actions.see-more' | translate }}</a>
+      </div>
+      <ul>
+        <li *ngFor="let t of recentTracking">
+          <strong>{{ t.status }}</strong><br>
+          {{ 'home.tracking.tracking-number' | translate }}: <span class="track-id">{{ t.trackingId }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Inventario -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>{{ 'home.sections.inventory' | translate }}</h2>
+        <a href="#">{{ 'home.actions.see-more' | translate }}</a>
+      </div>
+      <ul>
+        <li *ngFor="let i of inventory">
+          {{ 'home.inventory.status' | translate }}: <strong>{{ i.status }}</strong><br>
+          {{ 'home.inventory.tracking-number' | translate }}: <span class="track-id">{{ i.trackingId }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Reportes -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>{{ 'home.sections.reports' | translate }}</h2>
+        <a href="#">{{ 'home.actions.see-more' | translate }}</a>
+      </div>
+      <p>{{ 'home.reports.description' | translate }}</p>
+    </div>
+
+    <!-- Calendario -->
+    <div class="content-box">
+      <div class="content-header">
+        <h2>{{ 'home.sections.calendar' | translate }}</h2>
+        <a href="#">{{ 'home.actions.see-more' | translate }}</a>
+      </div>
+      <ul>
+        <li *ngFor="let c of calendar">
+          📅 {{ c.date }} — {{ 'home.calendar.order-number' | translate }}: {{ c.orderId }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
