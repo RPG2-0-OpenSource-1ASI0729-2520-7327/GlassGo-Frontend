@@ -4,7 +4,7 @@ This repository contains the **Frontend Open Source Application Development** of
 ---
 
 ## 🚀 Stack
-- **Angular 17** with standalone components and signals
+- **Angular 20** with standalone components and signals
 - **Leaflet** for interactive maps and route visualization  
 - **i18n** for internationalization (EN default, ES available)
 - **Chart.js** for dashboard analytics
@@ -35,32 +35,6 @@ src/app/
           └─ tracking/             # Main tracking interface
 ```
 
----
-
-## 🗺️ **NEW: Interactive Tracking Maps**
-
-### Features
-✅ **Real-time route visualization** with Leaflet maps  
-✅ **Custom markers** for origin, checkpoints, and destination  
-✅ **Route polylines** showing vehicle path  
-✅ **Animated current location** marker with pulse effect  
-✅ **Interactive popups** with timestamp and location details  
-✅ **Responsive design** for mobile and desktop
-
-### Tracking Interface
-- **Search by tracking number**: Enter any tracking ID to find shipments
-- **Live tracking list**: View all shipments currently in transit  
-- **Map visualization**: Interactive map showing complete route and current position
-- **Detailed information**: Driver, vehicle, ETA, and route distance
-
-### Sample Tracking Numbers
-- `6091228592056` → Miraflores (16 km)
-- `6091222839502` → Arequipa (1020 km)  
-- `6091228512345` → Chiclayo (770 km)
-- `6091223452986` → San Borja (8 km)
-
----
-
 ## 🚀 Run Locally
 
 ### 1. Install Dependencies
@@ -81,7 +55,6 @@ npm start
 
 ### 4. Access the Application
 - **Main app**: `http://localhost:4200`
-- **Tracking page**: `http://localhost:4200/tracking`
 - **API endpoints**: `http://localhost:3000`
 
 ---
