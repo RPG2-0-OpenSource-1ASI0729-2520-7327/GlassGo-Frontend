@@ -52,9 +52,21 @@
       "analytics": "Analytics"
     }
   },
-  "service-planning": {
+  "planning": {
     "title": "Create Order",
     "manageOrderDetails": "Manage your order details below",
+    "orderInformation": "Order Information",
+    "searchProducts": "Search for products...",
+    "addNewProduct": "Add new product",
+    "product": "Product",
+    "quantity": "Quantity",
+    "price": "Price",
+    "total": "Total",
+    "removeItem": "Remove item",
+    "noProductsAdded": "No products added to order",
+    "availableProducts": "Available Products",
+    "stock": "Stock",
+    "addToOrder": "Add to Order",
     "deliveryInformation": "Delivery Information",
     "deliveryDate": "Delivery Date",
     "deliveryTime": "Delivery Time",
@@ -65,7 +77,6 @@
     "orderSummary": "Order Summary",
     "subtotal": "Subtotal",
     "vat": "VAT",
-    "total": "Total",
     "items": "Items",
     "products": "products",
     "cancel": "Cancel",
