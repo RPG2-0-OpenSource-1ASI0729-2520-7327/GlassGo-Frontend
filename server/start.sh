@@ -1,2 +1,3 @@
-﻿
-json-server --watch db.json --routes routes.json
+﻿#!/bin/bash
+json-server --watch db.json --port 3000
+

@@ -1,0 +1,260 @@
+<!--
+  Header Section
+  Displays page context and business operation description
+-->
+<div class="header-section">
+  <h1 class="header-title">{{ 'planning.title' | translate }}</h1>
+  <p class="header-subtitle">{{ 'planning.manageOrderDetails' | translate }}</p>
+</div>
+
+<!--
+  Order Information Section
+  Displays products in the order with search and add functionality
+-->
+<div class="order-information-section">
+  <div class="order-info-header">
+    <h2 class="section-title">{{ 'planning.orderInformation' | translate }}</h2>
+
+    <!-- Product Search Section -->
+    <div class="product-search-section">
+      <div class="search-container">
+        <input
+          type="text"
+          class="search-input"
+          [placeholder]="'planning.searchProducts' | translate"
+          [(ngModel)]="searchTerm"
+          (input)="onSearchProducts($event)">
+        <span class="search-icon">🔍</span>
+      </div>
+      <button type="button" class="btn btn-add-product" (click)="onAddNewProduct()">
+        {{ 'planning.addNewProduct' | translate }}
+      </button>
+    </div>
+  </div>
+
+  <!-- Order Items Table -->
+  <div class="order-table-container">
+    <table class="order-table">
+      <thead>
+        <tr>
+          <th>{{ 'planning.product' | translate }}</th>
+          <th>{{ 'planning.quantity' | translate }}</th>
+          <th>{{ 'planning.price' | translate }}</th>
+          <th>{{ 'planning.total' | translate }}</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of currentOrderItems(); trackBy: trackByOrderItem" class="order-row">
+          <td class="product-name">{{ item.productName }}</td>
+          <td class="quantity-cell">
+            <input
+              type="number"
+              class="quantity-input"
+              [value]="item.quantity"
+              min="1"
+              [max]="item.product.stockQuantity"
+              (change)="onUpdateQuantity(item.productId, $event)">
+          </td>
+          <td class="price-cell">{{ item.getFormattedUnitPrice() }}</td>
+          <td class="total-cell">{{ item.getFormattedTotalPrice() }}</td>
+          <td class="actions-cell">
+            <button
+              type="button"
+              class="btn-remove"
+              (click)="onRemoveItem(item.productId)"
+              title="{{ 'planning.removeItem' | translate }}">
+              ✕
+            </button>
+          </td>
+        </tr>
+        <!-- Empty state when no items -->
+        <tr *ngIf="currentOrderItems().length === 0" class="empty-row">
+          <td colspan="5" class="empty-message">
+            {{ 'planning.noProductsAdded' | translate }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Available Products Section (for adding products) -->
+  <div class="available-products-section" *ngIf="showProductSelector">
+    <h3>{{ 'planning.availableProducts' | translate }}</h3>
+    <div class="products-grid">
+      <div
+        *ngFor="let product of filteredAvailableProducts(); trackBy: trackByProduct"
+        class="product-card"
+        [class.out-of-stock]="!product.isAvailable || product.stockQuantity === 0">
+
+        <div class="product-info">
+          <h4 class="product-name">{{ product.name }}</h4>
+          <p class="product-description">{{ product.description }}</p>
+          <div class="product-details">
+            <span class="product-price">{{ product.getFormattedPrice() }}</span>
+            <span class="product-stock">
+              {{ 'planning.stock' | translate }}: {{ product.stockQuantity }}
+            </span>
+          </div>
+        </div>
+
+        <div class="product-actions">
+          <input
+            type="number"
+            class="quantity-input small"
+            #quantityInput
+            value="1"
+            min="1"
+            [max]="product.stockQuantity"
+            [disabled]="!product.isAvailable || product.stockQuantity === 0">
+          <button
+            type="button"
+            class="btn btn-add-to-order"
+            [disabled]="!product.isAvailable || product.stockQuantity === 0"
+            (click)="onAddProductToOrder(product, quantityInput.value)">
+            {{ 'planning.addToOrder' | translate }}
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="content-layout">
+  <!--
+    Main Form Section
+    Captures delivery information for the order domain entity
+  -->
+  <div class="form-section">
+    <form [formGroup]="orderForm" (ngSubmit)="onSubmitOrder()" class="delivery-form">
+      <div class="form-header">
+        <h3>{{ 'planning.deliveryInformation' | translate }}</h3>
+      </div>
+
+      <!--
+        Delivery Date Field
+        Required field for scheduling order delivery
+      -->
+      <div class="form-group">
+        <label for="deliveryDate" class="form-label">{{ 'planning.deliveryDate' | translate }}</label>
+        <input
+          type="date"
+          id="deliveryDate"
+          formControlName="deliveryDate"
+          class="form-input"
+          placeholder="dd/mm/aaaa"
+          [class.error]="orderForm.get('deliveryDate')?.invalid && orderForm.get('deliveryDate')?.touched">
+        <!-- Validation error message for delivery date -->
+        <div class="error-message"
+             *ngIf="orderForm.get('deliveryDate')?.invalid && orderForm.get('deliveryDate')?.touched">
+          {{ 'planning.errors.deliveryDateRequired' | translate }}
+        </div>
+      </div>
+
+      <!--
+        Delivery Time Field
+        Required field for specific time slot selection
+      -->
+      <div class="form-group">
+        <label for="deliveryTime" class="form-label">{{ 'planning.deliveryTime' | translate }}</label>
+        <input
+          type="time"
+          id="deliveryTime"
+          formControlName="deliveryTime"
+          class="form-input"
+          placeholder="--:-- ----"
+          [class.error]="orderForm.get('deliveryTime')?.invalid && orderForm.get('deliveryTime')?.touched">
+        <!-- Validation error message for delivery time -->
+        <div class="error-message"
+             *ngIf="orderForm.get('deliveryTime')?.invalid && orderForm.get('deliveryTime')?.touched">
+          {{ 'planning.errors.deliveryTimeRequired' | translate }}
+        </div>
+      </div>
+
+      <!--
+        Delivery Address Field
+        Required field for order destination
+      -->
+      <div class="form-group">
+        <label for="deliveryAddress" class="form-label">{{ 'planning.deliveryAddress' | translate }}</label>
+        <input
+          type="text"
+          id="deliveryAddress"
+          formControlName="deliveryAddress"
+          class="form-input"
+          [placeholder]="'planning.deliveryAddressPlaceholder' | translate"
+          [class.error]="orderForm.get('deliveryAddress')?.invalid && orderForm.get('deliveryAddress')?.touched">
+        <!-- Validation error message for delivery address -->
+        <div class="error-message"
+             *ngIf="orderForm.get('deliveryAddress')?.invalid && orderForm.get('deliveryAddress')?.touched">
+          {{ 'planning.errors.deliveryAddressRequired' | translate }}
+        </div>
+      </div>
+
+      <!--
+        Special Instructions Field
+        Optional field for additional delivery notes or requirements
+      -->
+      <div class="form-group">
+        <label for="specialInstructions" class="form-label">{{ 'planning.specialInstructions' | translate }}</label>
+        <textarea
+          id="specialInstructions"
+          formControlName="specialInstructions"
+          class="form-textarea"
+          rows="4"
+          [placeholder]="'planning.specialInstructionsPlaceholder' | translate">
+        </textarea>
+      </div>
+
+      <!--
+        Form Action Buttons
+        Submit: Triggers order creation domain command
+        Cancel: Resets form and order state
+      -->
+      <div class="form-actions">
+        <button type="button" class="btn btn-cancel" (click)="onCancel()">
+          {{ 'planning.cancel' | translate }}
+        </button>
+        <button type="submit" class="btn btn-submit" [disabled]="!isFormValid">
+          {{ 'planning.submitOrder' | translate }}
+        </button>
+      </div>
+    </form>
+  </div>
+
+  <!--
+    Order Summary Section
+    Displays calculated totals from the Order domain entity
+    Sticky positioning keeps summary visible during scrolling
+  -->
+  <div class="summary-section">
+    <div class="order-summary-card">
+      <h3 class="summary-title">{{ 'planning.orderSummary' | translate }}</h3>
+
+      <!-- Subtotal: Sum of all order items before tax -->
+      <div class="summary-item">
+        <span class="summary-label">{{ 'planning.subtotal' | translate }}:</span>
+        <span class="summary-value">S/ {{ orderSummary.subtotal | number:'1.2-2' }}</span>
+      </div>
+
+      <!-- VAT: Tax amount calculated at 18% rate -->
+      <div class="summary-item">
+        <span class="summary-label">{{ 'planning.vat' | translate }} (18%):</span>
+        <span class="summary-value">S/ {{ orderSummary.vatAmount | number:'1.2-2' }}</span>
+      </div>
+
+      <!-- Total: Final amount including VAT (highlighted) -->
+      <div class="summary-item summary-total">
+        <span class="summary-label">{{ 'planning.total' | translate }}:</span>
+        <span class="summary-value">S/ {{ orderSummary.total | number:'1.2-2' }}</span>
+      </div>
+
+      <!-- Item Count: Total quantity of products in order -->
+      <div class="summary-item">
+        <span class="summary-label">{{ 'planning.items' | translate }}:</span>
+        <span class="summary-value">{{ orderSummary.itemCount }} {{ 'planning.products' | translate }}</span>
+      </div>
+    </div>
+  </div>
+</div>
+

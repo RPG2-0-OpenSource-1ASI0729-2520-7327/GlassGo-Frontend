@@ -1,6 +1,7 @@
 @import './custom-theme.scss';
 
 @import "primeicons/primeicons.css";
+@import 'leaflet/dist/leaflet.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
@@ -8,3 +9,23 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .container-with-spacing {
   margin: 10px;
 }
+
+/* Leaflet custom styles */
+.leaflet-popup-content {
+  margin: 12px 16px !important;
+}
+
+.leaflet-popup-content-wrapper {
+  border-radius: 8px !important;
+}
+
+.custom-route-marker {
+  background: none !important;
+  border: none !important;
+}
+
+.current-location-marker {
+  background: none !important;
+  border: none !important;
+}
+

@@ -1,6 +1,7 @@
 import { BaseAssembler } from './base-assembler';
 import { Order, OrderStatus } from '../domain/model/order';
 import { OrderItem } from '../domain/model/order-item';
+import { Product } from '../domain/model/product';
 import { DeliveryInformation } from '../domain/model/delivery-information';
 import {
   OrderResource,
@@ -68,12 +69,22 @@ export class OrderAssembler extends BaseAssembler<Order, OrderResource> {
    * @private
    */
   private orderItemToDomainModel(resource: OrderItemResource): OrderItem {
-    return new OrderItem(
-      resource.id,
+    // Create a temporary Product from the resource data
+    const product = new Product(
       resource.productId,
       resource.productName,
-      resource.quantity,
-      resource.unitPrice
+      '', // description - not available in OrderItemResource
+      resource.unitPrice,
+      'S/.', // default currency
+      true, // assume available
+      '', // category - not available in OrderItemResource
+      100 // default stock - not available in OrderItemResource
+    );
+
+    return new OrderItem(
+      resource.id,
+      product,
+      resource.quantity
     );
   }
 

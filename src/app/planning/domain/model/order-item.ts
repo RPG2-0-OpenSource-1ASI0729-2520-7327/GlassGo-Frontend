@@ -1,10 +1,16 @@
 import { BaseEntity } from './base-entity';
+import { Product } from './product';
 
 /**
  * Domain entity representing an item within an order.
  * Encapsulates product details and pricing for a specific quantity.
  */
 export class OrderItem extends BaseEntity {
+  /**
+   * The product associated with this order item.
+   */
+  product: Product;
+
   /**
    * Identifier of the product.
    */
@@ -33,23 +39,20 @@ export class OrderItem extends BaseEntity {
   /**
    * Creates a new OrderItem instance.
    * @param id - Unique identifier. Defaults to 0.
-   * @param productId - Product identifier. Defaults to 0.
-   * @param productName - Product name. Defaults to empty string.
+   * @param product - Product associated with this item.
    * @param quantity - Quantity. Defaults to 1.
-   * @param unitPrice - Unit price. Defaults to 0.
    */
   constructor(
     id: number = 0,
-    productId: number = 0,
-    productName: string = '',
-    quantity: number = 1,
-    unitPrice: number = 0
+    product: Product,
+    quantity: number = 1
   ) {
     super(id);
-    this.productId = productId;
-    this.productName = productName;
+    this.product = product;
+    this.productId = product.id;
+    this.productName = product.name;
     this.quantity = quantity;
-    this.unitPrice = unitPrice;
+    this.unitPrice = product.price;
     this.totalPrice = this.calculateTotalPrice();
   }
 
@@ -69,5 +72,29 @@ export class OrderItem extends BaseEntity {
   updateQuantity(quantity: number): void {
     this.quantity = quantity;
     this.totalPrice = this.calculateTotalPrice();
+  }
+
+  /**
+   * Gets the formatted unit price with currency.
+   * @returns The formatted unit price string.
+   */
+  getFormattedUnitPrice(): string {
+    return this.product.getFormattedPrice();
+  }
+
+  /**
+   * Gets the formatted total price with currency.
+   * @returns The formatted total price string.
+   */
+  getFormattedTotalPrice(): string {
+    return `${this.product.currency} ${this.totalPrice.toFixed(2)}`;
+  }
+
+  /**
+   * Checks if the requested quantity is available in stock.
+   * @returns True if quantity is available, false otherwise.
+   */
+  isQuantityAvailable(): boolean {
+    return this.product.hasEnoughStock(this.quantity);
   }
 }
