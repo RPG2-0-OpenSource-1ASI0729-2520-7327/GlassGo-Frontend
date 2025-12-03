@@ -49,14 +49,15 @@ export class PaymentsHistory {
   protected router = inject(Router);
 
   displayedColumns: string[] = [
-    "ID",
-    "Subscription ID",
-    "Amount",
-    "Currency",
-    "Method",
-    "Paid At",
-    "Status",
-    "External Tran. ID"
+    'id',
+    'subscriptionId',
+    'amount',
+    'currency',
+    'paymentMethod',
+    'paymentDate',
+    'status',
+    'externalTransactionId',
+    'actions'
   ];
 
   @ViewChild(MatSort) sort!: MatSort;
@@ -68,6 +69,10 @@ export class PaymentsHistory {
     source.paginator = this.paginator;
     return source;
   });
+
+  viewTransactionDetails(id: number) {
+    this.router.navigate([`/transactions/${id}`]).then();
+  }
 
   ngAfterViewChecked() {
     if (this.dataSource().paginator !== this.paginator) {
