@@ -6,6 +6,7 @@ import { CreateOrderComponent } from './planning/presentation/view/create-order/
 import { PageNotFoundComponent } from './shared/presentation/views/page-not-found/page-not-found';
 import { AdministrationComponent } from './shared/presentation/views/administration/administration';
 import { AnalyticComponent } from './analytics/presentation/views/report/report';
+import { PaymentsHistory } from './payments/presentation/views/payments-history/payments-history';
 import { TrackingComponent } from './Execution/presentation/views/tracking/tracking';
 
 export const routes: Routes = [
@@ -24,11 +25,11 @@ export const routes: Routes = [
       { path: 'inventario', component: ComingSoonComponent, title: 'Inventario - GlassGo' },
       { path: 'calendar', component: ComingSoonComponent, title: 'Calendario - GlassGo' },
       { path: 'reportes', component: AnalyticComponent, title: 'Reportes - GlassGo' },
-      { path: 'historial', component: ComingSoonComponent, title: 'Historial - GlassGo' },
-      { path: 'reclamos', component: ComingSoonComponent, title: 'Reclamos - GlassGo' },
+      { path: 'transactions', component: PaymentsHistory, title: 'Transacciones - GlassGo' },
       { path: 'administracion', component: AdministrationComponent, title: 'Administracion' }
     ]
   },
 
   { path: '**', component: PageNotFoundComponent, title: 'Página no encontrada - GlassGo' }
 ];
+
